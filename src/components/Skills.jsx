@@ -61,7 +61,7 @@ const Skills = () => {
   const additionalSkills = [
     'NLP & Text Processing',
     'Hugging Face Transformers',
-    'Vector Databases (Pinecone)',
+    'Vector Databases',
     'Speech Recognition (Whisper, Vosk)',
     'Prompt Engineering',
     'Model Fine-tuning',
