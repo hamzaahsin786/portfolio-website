@@ -43,7 +43,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
             >
-              Specializing in Machine Learning, Deep Learning, and NLP. Building intelligent solutions
+              Specialized in Machine Learning, Deep Learning, and NLP. Building intelligent solutions
               with cutting-edge AI technologies including LangChain, RAG pipelines, and LLMs.
             </motion.p>
 
