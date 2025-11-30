@@ -86,7 +86,7 @@ const Hero = () => {
                 <FaLinkedin className="text-2xl text-primary" />
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/hamzaahsin786"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-white border-2 border-gray-200 rounded-full hover:border-primary hover:bg-primary/5 transition-all hover:scale-110"

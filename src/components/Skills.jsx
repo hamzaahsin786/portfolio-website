@@ -150,7 +150,7 @@ const Skills = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-br from-primary/10 to-secondary/10 backdrop-blur-lg rounded-2xl border border-primary/20 p-8"
+          className="bg-gradient-to-br from-blue-50/50 to-purple-50/50 rounded-2xl border border-gray-200 p-8"
         >
           <h3 className="text-2xl font-bold mb-6 text-center text-gradient">
             Additional Technologies & Tools
@@ -164,7 +164,7 @@ const Skills = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
                 whileHover={{ scale: 1.1, y: -5 }}
-                className="px-4 py-2 bg-gray-800/70 backdrop-blur-sm rounded-full text-sm font-medium text-textSecondary border border-gray-200 hover:border-primary/50 hover:text-primary transition-all cursor-default"
+                className="px-4 py-2 bg-white rounded-full text-sm font-medium text-textPrimary border-2 border-gray-200 hover:border-primary hover:bg-primary/5 hover:text-primary transition-all cursor-default shadow-sm"
               >
                 {skill}
               </motion.span>
