@@ -47,7 +47,7 @@ const About = () => {
   }
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-b from-dark to-gray-900">
+    <section id="about" className="py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -71,18 +71,18 @@ const About = () => {
             <h3 className="text-3xl font-bold mb-6 text-gradient">
               AI Engineer & Software Developer
             </h3>
-            <p className="text-gray-300 text-lg mb-4 leading-relaxed">
+            <p className="text-textSecondary text-lg mb-4 leading-relaxed">
               I'm an Associate Software Engineer at Purelogics, specializing in developing AI-powered
               solutions using cutting-edge technologies in Machine Learning, Deep Learning, and Natural
               Language Processing.
             </p>
-            <p className="text-gray-300 text-lg mb-4 leading-relaxed">
+            <p className="text-textSecondary text-lg mb-4 leading-relaxed">
               With a Bachelor's degree in Computer Science from COMSATS University (2020-2024), I've
               built expertise in creating intelligent systems that solve real-world problems. My work
               involves integrating advanced AI models, implementing RAG pipelines, and developing
               scalable applications with modern frameworks.
             </p>
-            <p className="text-gray-300 text-lg mb-6 leading-relaxed">
+            <p className="text-textSecondary text-lg mb-6 leading-relaxed">
               I'm passionate about leveraging AI to create innovative solutions, from intelligent
               chatbots to automated recruitment systems. My goal is to push the boundaries of what's
               possible with AI technology.
@@ -91,15 +91,15 @@ const About = () => {
             <div className="flex gap-4">
               <div className="text-center">
                 <div className="text-4xl font-bold text-gradient">4+</div>
-                <div className="text-gray-400">Projects</div>
+                <div className="text-textSecondary">Projects</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-gradient">1+</div>
-                <div className="text-gray-400">Years Experience</div>
+                <div className="text-textSecondary">Years Experience</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-gradient">6+</div>
-                <div className="text-gray-400">Certifications</div>
+                <div className="text-textSecondary">Certifications</div>
               </div>
             </div>
           </motion.div>
@@ -116,11 +116,11 @@ const About = () => {
                 key={index}
                 variants={itemVariants}
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="bg-gray-800/50 backdrop-blur-lg p-6 rounded-2xl border border-gray-700 hover:border-primary/50 transition-all"
+                className="bg-white backdrop-blur-lg p-6 rounded-2xl border border-gray-200 hover:border-primary/50 transition-all"
               >
                 <div className="text-4xl text-primary mb-4">{item.icon}</div>
                 <h4 className="text-xl font-semibold mb-2">{item.title}</h4>
-                <p className="text-gray-400 text-sm">{item.description}</p>
+                <p className="text-textSecondary text-sm">{item.description}</p>
               </motion.div>
             ))}
           </motion.div>

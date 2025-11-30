@@ -4,7 +4,7 @@ import {
   SiPostgresql, SiMysql, SiGit, SiDocker, SiReact,
   SiJupyter, SiPandas, SiNumpy
 } from 'react-icons/si'
-import { FaBrain, FaRobot, FaCode, FaDatabase, FaChartLine, FaMicrophone, FaLaptopCode } from 'react-icons/fa'
+import { FaBrain, FaRobot, FaCode, FaDatabase, FaChartLine, FaMicrophone, FaLaptopCode, FaProjectDiagram } from 'react-icons/fa'
 
 const Skills = () => {
   const skillCategories = [
@@ -51,6 +51,7 @@ const Skills = () => {
       skills: [
         { name: 'Git', icon: <SiGit />, level: 90 },
         { name: 'VS Code', icon: <FaLaptopCode />, level: 95 },
+        { name: 'n8n', icon: <FaProjectDiagram />, level: 85 },
         { name: 'Jupyter', icon: <SiJupyter />, level: 90 },
         { name: 'Docker', icon: <SiDocker />, level: 75 },
         { name: 'React', icon: <SiReact />, level: 80 },
@@ -61,10 +62,11 @@ const Skills = () => {
   const additionalSkills = [
     'NLP & Text Processing',
     'Hugging Face Transformers',
-    'Vector Databases',
+    'Vector Databases (Pinecone)',
     'Speech Recognition (Whisper, Vosk)',
     'Prompt Engineering',
     'Model Fine-tuning',
+    'n8n Workflow Automation',
     'Data Visualization (Matplotlib, Seaborn)',
     'Power BI',
     'Bash Scripting',
@@ -74,7 +76,7 @@ const Skills = () => {
   ]
 
   return (
-    <section id="skills" className="py-20 bg-dark">
+    <section id="skills" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -86,7 +88,7 @@ const Skills = () => {
             Skills & <span className="text-gradient">Expertise</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-4"></div>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-textSecondary max-w-2xl mx-auto">
             Comprehensive technical skills across AI, ML, and modern software development
           </p>
         </motion.div>
@@ -100,7 +102,7 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: catIndex * 0.1 }}
-              className="bg-gray-800/50 backdrop-blur-lg rounded-2xl border border-gray-700 p-6 hover:border-primary/50 transition-all"
+              className="bg-white backdrop-blur-lg rounded-2xl border border-gray-200 p-6 hover:border-primary/50 transition-all"
             >
               {/* Category Header */}
               <div className="flex items-center gap-3 mb-6">
@@ -119,15 +121,15 @@ const Skills = () => {
                         <span className={`text-lg bg-gradient-to-r ${category.gradient} bg-clip-text text-transparent`}>
                           {skill.icon}
                         </span>
-                        <span className="text-sm font-medium text-gray-300">
+                        <span className="text-sm font-medium text-textSecondary">
                           {skill.name}
                         </span>
                       </div>
-                      <span className="text-xs text-gray-400">{skill.level}%</span>
+                      <span className="text-xs text-textSecondary">{skill.level}%</span>
                     </div>
 
                     {/* Progress Bar */}
-                    <div className="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
+                    <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
                       <motion.div
                         initial={{ width: 0 }}
                         whileInView={{ width: `${skill.level}%` }}
@@ -162,7 +164,7 @@ const Skills = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
                 whileHover={{ scale: 1.1, y: -5 }}
-                className="px-4 py-2 bg-gray-800/70 backdrop-blur-sm rounded-full text-sm font-medium text-gray-300 border border-gray-700 hover:border-primary/50 hover:text-primary transition-all cursor-default"
+                className="px-4 py-2 bg-gray-800/70 backdrop-blur-sm rounded-full text-sm font-medium text-textSecondary border border-gray-200 hover:border-primary/50 hover:text-primary transition-all cursor-default"
               >
                 {skill}
               </motion.span>

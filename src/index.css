@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-dark text-light antialiased;
+    @apply bg-gray-50 text-gray-900 antialiased;
   }
 
   html {

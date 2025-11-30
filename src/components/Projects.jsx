@@ -59,7 +59,7 @@ const Projects = () => {
   ]
 
   return (
-    <section id="projects" className="py-20 bg-gradient-to-b from-gray-900 to-dark">
+    <section id="projects" className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -71,7 +71,7 @@ const Projects = () => {
             Featured <span className="text-gradient">Projects</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-4"></div>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-textSecondary max-w-2xl mx-auto">
             Showcasing cutting-edge AI solutions built with modern technologies
           </p>
         </motion.div>
@@ -88,15 +88,15 @@ const Projects = () => {
               className="group relative"
             >
               {/* Card */}
-              <div className="bg-gray-800/50 backdrop-blur-lg rounded-2xl border border-gray-700 overflow-hidden hover:border-primary/50 transition-all h-full">
+              <div className="bg-white backdrop-blur-lg rounded-2xl border border-gray-200 overflow-hidden hover:border-primary/50 transition-all h-full">
                 {/* Header with gradient */}
                 <div className={`bg-gradient-to-r ${project.gradient} p-6`}>
                   <div className="flex items-center gap-4">
-                    <div className="text-5xl text-white opacity-90">
+                    <div className="text-5xl text-textPrimary opacity-90">
                       {project.icon}
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-white">
+                      <h3 className="text-2xl font-bold text-textPrimary">
                         {project.title}
                       </h3>
                     </div>
@@ -105,7 +105,7 @@ const Projects = () => {
 
                 {/* Content */}
                 <div className="p-6">
-                  <p className="text-gray-300 mb-4 leading-relaxed">
+                  <p className="text-textSecondary mb-4 leading-relaxed">
                     {project.description}
                   </p>
 
@@ -114,7 +114,7 @@ const Projects = () => {
                     <h4 className="text-sm font-semibold text-primary mb-3">Key Features:</h4>
                     <ul className="space-y-2">
                       {project.highlights.map((highlight, i) => (
-                        <li key={i} className="flex items-start gap-2 text-sm text-gray-400">
+                        <li key={i} className="flex items-start gap-2 text-sm text-textSecondary">
                           <span className="text-primary mt-1">▸</span>
                           <span>{highlight}</span>
                         </li>

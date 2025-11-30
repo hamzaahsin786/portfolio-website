@@ -66,7 +66,7 @@ const Experience = () => {
   ]
 
   return (
-    <section id="experience" className="py-20 bg-gray-900">
+    <section id="experience" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -100,7 +100,7 @@ const Experience = () => {
                   className="relative pl-8 pb-8 border-l-2 border-primary/30 last:pb-0"
                 >
                   {/* Timeline dot */}
-                  <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-primary border-4 border-dark"></div>
+                  <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-primary border-4 border-white"></div>
 
                   {exp.current && (
                     <span className="inline-block px-3 py-1 bg-primary/20 text-primary text-xs font-semibold rounded-full mb-2">
@@ -108,15 +108,15 @@ const Experience = () => {
                     </span>
                   )}
 
-                  <h4 className="text-xl font-bold text-white mb-1">{exp.title}</h4>
+                  <h4 className="text-xl font-bold text-textPrimary mb-1">{exp.title}</h4>
                   <div className="flex items-center gap-2 text-primary mb-2">
                     <span className="font-semibold">{exp.company}</span>
                   </div>
-                  <div className="flex items-center gap-2 text-gray-400 text-sm mb-3">
+                  <div className="flex items-center gap-2 text-textSecondary text-sm mb-3">
                     <FaCalendar className="text-xs" />
                     <span>{exp.period}</span>
                   </div>
-                  <p className="text-gray-300 leading-relaxed">{exp.description}</p>
+                  <p className="text-textSecondary leading-relaxed">{exp.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -134,18 +134,18 @@ const Experience = () => {
               whileHover={{ scale: 1.02 }}
               className="bg-gradient-to-br from-primary/10 to-secondary/10 backdrop-blur-lg p-6 rounded-2xl border border-primary/20 mb-8"
             >
-              <h4 className="text-xl font-bold text-white mb-2">
+              <h4 className="text-xl font-bold text-textPrimary mb-2">
                 Bachelor of Science in Computer Science
               </h4>
               <div className="text-primary font-semibold mb-2">COMSATS University</div>
-              <div className="flex items-center gap-2 text-gray-400 text-sm">
+              <div className="flex items-center gap-2 text-textSecondary text-sm">
                 <FaCalendar className="text-xs" />
                 <span>2020 - 2024</span>
               </div>
             </motion.div>
 
             {/* Certifications */}
-            <div className="bg-gray-800/50 backdrop-blur-lg p-6 rounded-2xl border border-gray-700">
+            <div className="bg-white backdrop-blur-lg p-6 rounded-2xl border border-gray-200">
               <h4 className="text-lg font-bold mb-4 text-gradient">Certifications</h4>
               <div className="space-y-3">
                 {certifications.map((cert, index) => (
@@ -161,7 +161,7 @@ const Experience = () => {
                         href={cert.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-start gap-3 text-gray-300 group hover:text-primary transition-colors cursor-pointer"
+                        className="flex items-start gap-3 text-textSecondary group hover:text-primary transition-colors cursor-pointer"
                       >
                         <span className="text-primary mt-1 group-hover:scale-125 transition-transform">
                           ✓
@@ -169,7 +169,7 @@ const Experience = () => {
                         <span className="text-sm group-hover:underline">{cert.name}</span>
                       </a>
                     ) : (
-                      <div className="flex items-start gap-3 text-gray-300">
+                      <div className="flex items-start gap-3 text-textSecondary">
                         <span className="text-primary mt-1">
                           ✓
                         </span>
