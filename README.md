@@ -5,6 +5,7 @@ A modern, interactive portfolio website showcasing AI/ML projects, skills, and e
 ## Features
 
 ✨ **Modern Design** - Clean, professional UI with smooth animations
+💬 **Hamza AI Chatbot** - Built-in Q&A assistant that answers visitors' questions about Hamza from his profile (no API key, no cost)
 🎨 **Interactive Components** - Engaging user experience with Framer Motion
 📱 **Responsive** - Fully responsive design for all devices
 🚀 **Fast Performance** - Built with Vite for lightning-fast load times

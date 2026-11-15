@@ -8,6 +8,7 @@ import Skills from './components/Skills'
 import Workflows from './components/Workflows'
 import Contact from './components/Contact'
 import FloatingCVButton from './components/FloatingCVButton'
+import ChatBot from './components/ChatBot'
 import NeuralCanvas from './components/NeuralCanvas'
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
         <Workflows />
         <Contact />
         <FloatingCVButton />
+        <ChatBot />
       </div>
     </div>
   )
