@@ -232,3 +232,7 @@ Built by Muhammad Hamza
 ---
 
 **Made with ❤️ using React, Tailwind CSS, and Framer Motion**
+
+## Futuristic Redesign (Nov 2026)
+
+Dark neon theme (#05060a base, cyan #22d3ee / violet #a78bfa accents, Space Grotesk + JetBrains Mono + Inter), animated neural-network canvas hero background, HUD-framed portrait, terminal-style cards, glass panels, scroll-progress bar, and a working mobile menu. All content, links, and data are unchanged from the original portfolio.

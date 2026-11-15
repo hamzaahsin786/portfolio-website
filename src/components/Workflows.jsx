@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { FaProjectDiagram } from 'react-icons/fa'
+import SectionHeading from './SectionHeading'
 
 const Workflows = () => {
   // Add your n8n workflow screenshots here
@@ -26,25 +27,25 @@ const Workflows = () => {
   ]
 
   return (
-    <section id="workflows" className="py-20 bg-gradient-to-b from-white to-gray-50">
+    <section id="workflows" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <FaProjectDiagram className="text-5xl text-primary" />
-            <h2 className="text-4xl md:text-5xl font-bold">
-              n8n <span className="text-gradient">Workflows</span>
-            </h2>
-          </div>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-4"></div>
-          <p className="text-textSecondary max-w-2xl mx-auto">
-            Automated workflows built with n8n for various business processes and integrations
-          </p>
-        </motion.div>
+        <div className="text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex items-center justify-center gap-3 mb-2"
+          >
+            <FaProjectDiagram className="text-5xl text-primary drop-shadow-[0_0_16px_rgba(34,211,238,0.5)]" />
+          </motion.div>
+          <SectionHeading
+            index="05"
+            eyebrow="AUTOMATION"
+            title="n8n"
+            highlight="Workflows"
+            subtitle="Automated workflows built with n8n for various business processes and integrations"
+          />
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {workflows.map((workflow, index) => (
@@ -55,10 +56,10 @@ const Workflows = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
               whileHover={{ y: -10, scale: 1.02 }}
-              className="group bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200 hover:border-primary/50 transition-all cursor-pointer"
+              className="group glass rounded-2xl overflow-hidden hover:border-primary/50 hover:shadow-[0_0_28px_rgba(34,211,238,0.15)] transition-all cursor-pointer"
             >
               {/* Workflow Image */}
-              <div className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-purple-50 aspect-video">
+              <div className="relative overflow-hidden bg-panel aspect-video border-b border-white/10">
                 <img
                   src={workflow.image}
                   alt={workflow.title}
@@ -83,10 +84,10 @@ const Workflows = () => {
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-textPrimary group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-bold mb-2 text-white group-hover:text-primary transition-colors">
                   {workflow.title}
                 </h3>
-                <p className="text-textSecondary text-sm mb-4">
+                <p className="text-textSecondary text-sm mb-4 leading-relaxed">
                   {workflow.description}
                 </p>
 
@@ -95,7 +96,7 @@ const Workflows = () => {
                   {workflow.tags.map((tag, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full"
+                      className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full border border-primary/20"
                     >
                       {tag}
                     </span>
@@ -111,12 +112,12 @@ const Workflows = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-12 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 border border-primary/20"
+          className="mt-12 glass rounded-2xl p-8 bg-gradient-to-r from-primary/[0.08] to-secondary/[0.08] hover:border-primary/40 transition-all"
         >
           <div className="flex items-start gap-4">
-            <FaProjectDiagram className="text-4xl text-primary flex-shrink-0 mt-1" />
+            <FaProjectDiagram className="text-4xl text-primary flex-shrink-0 mt-1 drop-shadow-[0_0_12px_rgba(34,211,238,0.45)]" />
             <div>
-              <h3 className="text-2xl font-bold mb-2 text-textPrimary">
+              <h3 className="text-2xl font-bold mb-2 text-white">
                 Workflow Automation Expertise
               </h3>
               <p className="text-textSecondary leading-relaxed">

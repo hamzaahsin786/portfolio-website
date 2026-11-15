@@ -3,21 +3,131 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply bg-gray-50 text-gray-900 antialiased;
-  }
-
   html {
     scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-void text-textPrimary antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  ::selection {
+    background: rgba(34, 211, 238, 0.35);
+    color: #ffffff;
+  }
+
+  /* Slim futuristic scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #05060a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #22d3ee, #8b5cf6);
+    border-radius: 999px;
+    border: 2px solid #05060a;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #22d3ee;
+  }
+
+  /* Visible keyboard focus everywhere */
+  :focus-visible {
+    outline: 2px solid #22d3ee;
+    outline-offset: 3px;
+    border-radius: 4px;
   }
 }
 
 @layer utilities {
+  /* Legacy gradient-text helper, now neon cyan -> violet */
   .text-gradient {
     @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
   }
 
   .gradient-bg {
     @apply bg-gradient-to-br from-primary/20 via-secondary/20 to-transparent;
+  }
+
+  /* Dark glass panel */
+  .glass {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  /* Neon gradient text (cyan -> violet) */
+  .neon-text {
+    @apply bg-gradient-to-r from-primary via-neon to-secondary bg-clip-text text-transparent;
+  }
+
+  /* HUD corner ticks — apply to a relatively-positioned element */
+  .hud-corner {
+    position: relative;
+  }
+  .hud-corner::before,
+  .hud-corner::after {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    pointer-events: none;
+    z-index: 10;
+  }
+  .hud-corner::before {
+    top: -1px;
+    left: -1px;
+    border-top: 2px solid #22d3ee;
+    border-left: 2px solid #22d3ee;
+  }
+  .hud-corner::after {
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 2px solid #22d3ee;
+    border-right: 2px solid #22d3ee;
+  }
+
+  /* Faint blueprint grid background */
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(34, 211, 238, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(34, 211, 238, 0.05) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  /* Cyan glow helper */
+  .glow {
+    box-shadow: 0 0 24px rgba(34, 211, 238, 0.35);
+  }
+
+  /* Animated scanline sweep (used on the portrait HUD frame) */
+  .scanline {
+    position: relative;
+    overflow: hidden;
+  }
+  .scanline::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.03) 0px,
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+    pointer-events: none;
+  }
+
+  /* Slow drifting glow blobs */
+  @keyframes drift {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(40px, -30px) scale(1.08); }
+  }
+  .animate-drift {
+    animation: drift 14s ease-in-out infinite;
   }
 }

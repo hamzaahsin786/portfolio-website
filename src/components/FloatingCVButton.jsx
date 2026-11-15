@@ -28,7 +28,8 @@ const FloatingCVButton = () => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         onClick={handleDownload}
-        className="relative group bg-gradient-to-r from-primary to-secondary text-white rounded-full shadow-2xl hover:shadow-primary/50 transition-all duration-300"
+        aria-label="Download CV"
+        className="relative group bg-gradient-to-r from-cyan-400 to-violet-500 text-white rounded-full border border-cyan-300/40 shadow-[0_0_28px_rgba(34,211,238,0.45)] hover:shadow-[0_0_40px_rgba(34,211,238,0.65)] transition-all duration-300"
       >
         {/* Button Container */}
         <div className="flex items-center gap-3 px-6 py-4">
@@ -67,10 +68,10 @@ const FloatingCVButton = () => {
         <motion.div
           initial={{ opacity: 0, x: 10 }}
           animate={{ opacity: 1, x: 0 }}
-          className="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-dark text-white px-3 py-2 rounded-lg text-sm font-medium whitespace-nowrap shadow-lg"
+          className="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-panel text-white px-3 py-2 rounded-lg text-sm font-medium whitespace-nowrap shadow-lg border border-white/10"
         >
           Download My CV
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-full w-0 h-0 border-8 border-transparent border-l-dark"></div>
+          <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-full w-0 h-0 border-8 border-transparent border-l-panel"></div>
         </motion.div>
       )}
     </motion.div>

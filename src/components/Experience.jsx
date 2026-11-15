@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { FaBriefcase, FaCalendar } from 'react-icons/fa'
+import SectionHeading from './SectionHeading'
 
 const Experience = () => {
   const experiences = [
@@ -66,24 +67,19 @@ const Experience = () => {
   ]
 
   return (
-    <section id="experience" className="py-20 bg-gray-50">
+    <section id="experience" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Work <span className="text-gradient">Experience</span>
-          </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
-        </motion.div>
+        <SectionHeading
+          index="02"
+          eyebrow="EXPERIENCE"
+          title="Work"
+          highlight="Experience"
+        />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Work Experience */}
           <div>
-            <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
+            <h3 className="text-2xl font-bold mb-8 flex items-center gap-3 text-white">
               <FaBriefcase className="text-primary" />
               Professional Experience
             </h3>
@@ -99,16 +95,17 @@ const Experience = () => {
                   whileHover={{ scale: 1.02 }}
                   className="relative pl-8 pb-8 border-l-2 border-primary/30 last:pb-0"
                 >
-                  {/* Timeline dot */}
-                  <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-primary border-4 border-white"></div>
+                  {/* Glowing timeline dot */}
+                  <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-primary border-4 border-void shadow-[0_0_12px_rgba(34,211,238,0.9)]"></div>
 
                   {exp.current && (
-                    <span className="inline-block px-3 py-1 bg-primary/20 text-primary text-xs font-semibold rounded-full mb-2">
-                      Current
+                    <span className="inline-flex items-center gap-2 px-3 py-1 bg-primary/15 text-primary text-xs font-mono font-semibold tracking-wider rounded-full mb-2 border border-primary/30">
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" aria-hidden="true"></span>
+                      CURRENT
                     </span>
                   )}
 
-                  <h4 className="text-xl font-bold text-textPrimary mb-1">{exp.title}</h4>
+                  <h4 className="text-xl font-bold text-white mb-1">{exp.title}</h4>
                   <div className="flex items-center gap-2 text-primary mb-2">
                     <span className="font-semibold">{exp.company}</span>
                   </div>
@@ -124,7 +121,7 @@ const Experience = () => {
 
           {/* Education & Certifications */}
           <div>
-            <h3 className="text-2xl font-bold mb-8">Education & Certifications</h3>
+            <h3 className="text-2xl font-bold mb-8 text-white">Education & Certifications</h3>
 
             {/* Education */}
             <motion.div
@@ -132,9 +129,9 @@ const Experience = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.02 }}
-              className="bg-gradient-to-br from-primary/10 to-secondary/10 backdrop-blur-lg p-6 rounded-2xl border border-primary/20 mb-8"
+              className="glass rounded-2xl p-6 mb-8 bg-gradient-to-br from-primary/10 to-secondary/10 hover:border-primary/40 transition-all"
             >
-              <h4 className="text-xl font-bold text-textPrimary mb-2">
+              <h4 className="text-xl font-bold text-white mb-2">
                 Bachelor of Science in Computer Science
               </h4>
               <div className="text-primary font-semibold mb-2">COMSATS University</div>
@@ -145,8 +142,8 @@ const Experience = () => {
             </motion.div>
 
             {/* Certifications */}
-            <div className="bg-white backdrop-blur-lg p-6 rounded-2xl border border-gray-200">
-              <h4 className="text-lg font-bold mb-4 text-gradient">Certifications</h4>
+            <div className="glass rounded-2xl p-6">
+              <h4 className="text-lg font-bold mb-4 neon-text">Certifications</h4>
               <div className="space-y-3">
                 {certifications.map((cert, index) => (
                   <motion.div

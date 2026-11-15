@@ -5,13 +5,14 @@ import {
   SiJupyter, SiPandas, SiNumpy
 } from 'react-icons/si'
 import { FaBrain, FaRobot, FaCode, FaDatabase, FaChartLine, FaMicrophone, FaLaptopCode, FaProjectDiagram } from 'react-icons/fa'
+import SectionHeading from './SectionHeading'
 
 const Skills = () => {
   const skillCategories = [
     {
       title: 'Machine Learning & Data Science',
       icon: <FaBrain />,
-      gradient: 'from-blue-500 to-cyan-500',
+      gradient: 'from-cyan-400 to-blue-500',
       skills: [
         { name: 'Python', icon: <SiPython />, level: 95 },
         { name: 'Pandas', icon: <SiPandas />, level: 90 },
@@ -23,7 +24,7 @@ const Skills = () => {
     {
       title: 'Deep Learning & AI',
       icon: <FaRobot />,
-      gradient: 'from-purple-500 to-pink-500',
+      gradient: 'from-violet-400 to-fuchsia-500',
       skills: [
         { name: 'TensorFlow', icon: <SiTensorflow />, level: 85 },
         { name: 'PyTorch', icon: <SiPytorch />, level: 85 },
@@ -35,7 +36,7 @@ const Skills = () => {
     {
       title: 'Backend & APIs',
       icon: <FaCode />,
-      gradient: 'from-green-500 to-emerald-500',
+      gradient: 'from-emerald-400 to-cyan-500',
       skills: [
         { name: 'Django', icon: <SiDjango />, level: 90 },
         { name: 'FastAPI', icon: <SiFastapi />, level: 88 },
@@ -47,7 +48,7 @@ const Skills = () => {
     {
       title: 'Tools & Technologies',
       icon: <FaChartLine />,
-      gradient: 'from-orange-500 to-red-500',
+      gradient: 'from-amber-400 to-violet-500',
       skills: [
         { name: 'Git', icon: <SiGit />, level: 90 },
         { name: 'VS Code', icon: <FaLaptopCode />, level: 95 },
@@ -76,22 +77,15 @@ const Skills = () => {
   ]
 
   return (
-    <section id="skills" className="py-20 bg-white">
+    <section id="skills" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Skills & <span className="text-gradient">Expertise</span>
-          </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-4"></div>
-          <p className="text-textSecondary max-w-2xl mx-auto">
-            Comprehensive technical skills across AI, ML, and modern software development
-          </p>
-        </motion.div>
+        <SectionHeading
+          index="04"
+          eyebrow="SKILLS"
+          title="Skills &"
+          highlight="Expertise"
+          subtitle="Comprehensive technical skills across AI, ML, and modern software development"
+        />
 
         {/* Main Skill Categories */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
@@ -102,14 +96,14 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: catIndex * 0.1 }}
-              className="bg-white backdrop-blur-lg rounded-2xl border border-gray-200 p-6 hover:border-primary/50 transition-all"
+              className="glass rounded-2xl p-6 hover:border-primary/50 hover:shadow-[0_0_24px_rgba(34,211,238,0.12)] transition-all"
             >
               {/* Category Header */}
               <div className="flex items-center gap-3 mb-6">
-                <div className={`text-3xl bg-gradient-to-r ${category.gradient} bg-clip-text text-transparent`}>
+                <div className={`text-3xl bg-gradient-to-r ${category.gradient} bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(34,211,238,0.35)]`}>
                   {category.icon}
                 </div>
-                <h3 className="text-xl font-bold">{category.title}</h3>
+                <h3 className="text-xl font-bold text-white">{category.title}</h3>
               </div>
 
               {/* Skills List */}
@@ -125,17 +119,17 @@ const Skills = () => {
                           {skill.name}
                         </span>
                       </div>
-                      <span className="text-xs text-textSecondary">{skill.level}%</span>
+                      <span className="font-mono text-xs text-primary">{skill.level}%</span>
                     </div>
 
-                    {/* Progress Bar */}
-                    <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
+                    {/* Glowing Progress Bar */}
+                    <div className="w-full bg-white/5 border border-white/5 rounded-full h-2 overflow-hidden">
                       <motion.div
                         initial={{ width: 0 }}
                         whileInView={{ width: `${skill.level}%` }}
                         viewport={{ once: true }}
                         transition={{ duration: 1, delay: catIndex * 0.1 + skillIndex * 0.1 }}
-                        className={`h-full bg-gradient-to-r ${category.gradient} rounded-full`}
+                        className="h-full bg-gradient-to-r from-cyan-400 to-violet-500 rounded-full shadow-[0_0_12px_rgba(34,211,238,0.6)]"
                       />
                     </div>
                   </div>
@@ -150,9 +144,9 @@ const Skills = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-br from-blue-50/50 to-purple-50/50 rounded-2xl border border-gray-200 p-8"
+          className="glass rounded-2xl p-8 bg-gradient-to-br from-primary/[0.06] to-secondary/[0.06]"
         >
-          <h3 className="text-2xl font-bold mb-6 text-center text-gradient">
+          <h3 className="font-display text-2xl font-bold mb-6 text-center neon-text">
             Additional Technologies & Tools
           </h3>
           <div className="flex flex-wrap gap-3 justify-center">
@@ -163,8 +157,8 @@ const Skills = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
-                whileHover={{ scale: 1.1, y: -5 }}
-                className="px-4 py-2 bg-white rounded-full text-sm font-medium text-textPrimary border-2 border-gray-200 hover:border-primary hover:bg-primary/5 hover:text-primary transition-all cursor-default shadow-sm"
+                whileHover={{ scale: 1.08, y: -3 }}
+                className="px-4 py-2 glass rounded-full text-sm font-medium text-textPrimary hover:border-primary/60 hover:text-primary transition-all cursor-default"
               >
                 {skill}
               </motion.span>

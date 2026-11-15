@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { FaReact, FaPython, FaDatabase, FaRobot, FaBrain } from 'react-icons/fa'
 import { SiDjango, SiFastapi, SiPostgresql, SiOpenai } from 'react-icons/si'
+import SectionHeading from './SectionHeading'
 
 const Projects = () => {
   const projects = [
@@ -15,7 +16,7 @@ const Projects = () => {
       ],
       tech: ['Django', 'PostgreSQL', 'React', 'LangChain', 'GPT-4o', 'Redis', 'Celery'],
       icon: <FaBrain />,
-      gradient: 'from-blue-500 to-cyan-500'
+      gradient: 'from-cyan-500/25 to-blue-500/25'
     },
     {
       title: 'AI-Powered Restaurant System',
@@ -28,7 +29,7 @@ const Projects = () => {
       ],
       tech: ['FastAPI', 'LangGraph', 'Pinecone', 'GPT-4o', 'PostgreSQL'],
       icon: <FaRobot />,
-      gradient: 'from-purple-500 to-pink-500'
+      gradient: 'from-violet-500/25 to-fuchsia-500/25'
     },
     {
       title: 'TalentTorch - AI Recruitment System',
@@ -41,7 +42,7 @@ const Projects = () => {
       ],
       tech: ['Django', 'NLP', 'Mistral 7B', 'MySQL', 'RAG'],
       icon: <SiDjango />,
-      gradient: 'from-green-500 to-emerald-500'
+      gradient: 'from-emerald-500/25 to-cyan-500/25'
     },
     {
       title: 'Intelligent Codebase Assistant',
@@ -54,27 +55,20 @@ const Projects = () => {
       ],
       tech: ['Django', 'Pinecone', 'GPT-4o', 'LLaMA 3', 'Ollama'],
       icon: <FaDatabase />,
-      gradient: 'from-orange-500 to-red-500'
+      gradient: 'from-amber-500/25 to-violet-500/25'
     }
   ]
 
   return (
-    <section id="projects" className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section id="projects" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Featured <span className="text-gradient">Projects</span>
-          </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-4"></div>
-          <p className="text-textSecondary max-w-2xl mx-auto">
-            Showcasing cutting-edge AI solutions built with modern technologies
-          </p>
-        </motion.div>
+        <SectionHeading
+          index="03"
+          eyebrow="PROJECTS"
+          title="Featured"
+          highlight="Projects"
+          subtitle="Showcasing cutting-edge AI solutions built with modern technologies"
+        />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
@@ -88,15 +82,23 @@ const Projects = () => {
               className="group relative"
             >
               {/* Card */}
-              <div className="bg-white backdrop-blur-lg rounded-2xl border border-gray-200 overflow-hidden hover:border-primary/50 transition-all h-full">
-                {/* Header with gradient */}
-                <div className={`bg-gradient-to-r ${project.gradient} p-6`}>
+              <div className="glass rounded-2xl overflow-hidden hover:border-primary/50 hover:shadow-[0_0_32px_rgba(34,211,238,0.15)] transition-all h-full">
+                {/* Terminal-window header */}
+                <div className={`bg-gradient-to-r ${project.gradient} border-b border-white/10 p-5`}>
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="w-2.5 h-2.5 rounded-full bg-red-400/70"></span>
+                    <span className="w-2.5 h-2.5 rounded-full bg-yellow-400/70"></span>
+                    <span className="w-2.5 h-2.5 rounded-full bg-accent/80"></span>
+                    <span className="ml-auto font-mono text-xs tracking-[0.25em] text-white/50">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                  </div>
                   <div className="flex items-center gap-4">
-                    <div className="text-5xl text-textPrimary opacity-90">
+                    <div className="text-5xl text-white opacity-90 drop-shadow-[0_0_16px_rgba(34,211,238,0.5)]">
                       {project.icon}
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-textPrimary">
+                      <h3 className="font-display text-2xl font-bold text-white">
                         {project.title}
                       </h3>
                     </div>
@@ -111,7 +113,7 @@ const Projects = () => {
 
                   {/* Highlights */}
                   <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-primary mb-3">Key Features:</h4>
+                    <h4 className="text-sm font-semibold text-primary mb-3 font-mono tracking-wider">Key Features:</h4>
                     <ul className="space-y-2">
                       {project.highlights.map((highlight, i) => (
                         <li key={i} className="flex items-start gap-2 text-sm text-textSecondary">
