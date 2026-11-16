@@ -1,28 +1,28 @@
 import { motion } from 'framer-motion'
-import { FaBrain, FaCode, FaRobot, FaChartLine } from 'react-icons/fa'
+import { FaBrain, FaRobot, FaMicrophone, FaChartLine } from 'react-icons/fa'
 import SectionHeading from './SectionHeading'
 
 const About = () => {
   const highlights = [
     {
       icon: <FaBrain />,
-      title: 'AI & Machine Learning',
-      description: 'Expert in ML, DL, and NLP with hands-on experience in building intelligent systems'
+      title: 'LLM Systems in Production',
+      description: 'Taking LLM systems from research into production — model selection, benchmarking, fine-tuning, deployment, and monitoring'
     },
     {
       icon: <FaRobot />,
-      title: 'LLM Integration',
-      description: 'Proficient in LangChain, RAG pipelines, and integrating GPT-4 for real-world applications'
+      title: 'Agentic AI & Multi-Agent Systems',
+      description: 'Multi-agent systems and agentic RAG on LangChain and LangGraph, with tool calling and human-in-the-loop escalation'
     },
     {
-      icon: <FaCode />,
-      title: 'Full-Stack Development',
-      description: 'Building robust backends with Django, FastAPI, and Flask with modern frontend integration'
+      icon: <FaMicrophone />,
+      title: 'Real-Time Voice AI',
+      description: 'Real-time voice agents and inbound calling agents on LiveKit, with ASR/STT and TTS'
     },
     {
       icon: <FaChartLine />,
-      title: 'Data Science',
-      description: 'Strong foundation in data analysis, visualization, and predictive modeling'
+      title: 'Evaluation & Observability',
+      description: 'Retrieval evaluation, LLM-as-judge, DeepEval and Confident AI over golden datasets — working to an accuracy target, not a demo'
     }
   ]
 
@@ -71,33 +71,36 @@ const About = () => {
               AI Engineer & Software Developer
             </h3>
             <p className="text-textSecondary text-lg mb-4 leading-relaxed">
-              I'm an Associate Software Engineer at Purelogics, specializing in developing AI-powered
-              solutions using cutting-edge technologies in Machine Learning, Deep Learning, and Natural
-              Language Processing.
+              I'm an AI Engineer with 3 years taking LLM systems from research into production. I own
+              the full lifecycle — model selection and benchmarking, fine-tuning, retrieval and
+              evaluation design, deployment, and monitoring — and work to an accuracy target agreed
+              up front rather than to a demo.
             </p>
             <p className="text-textSecondary text-lg mb-4 leading-relaxed">
-              With a Bachelor's degree in Computer Science from COMSATS University (2020-2024), I've
-              built expertise in creating intelligent systems that solve real-world problems. My work
-              involves integrating advanced AI models, implementing RAG pipelines, and developing
-              scalable applications with modern frameworks.
+              At MDSOL Technologies I owned the model and retrieval layers across two production SaaS
+              AI platforms serving 40+ agencies, shipping end to end — including a multi-agent system
+              on LangChain and LangGraph and a four-stage RAG evaluation harness over a 200-case
+              golden set. At PureLogics I architect end-to-end RAG pipelines with hybrid retrieval,
+              cross-encoder reranking, and LoRA/QLoRA fine-tuning for enterprise workflows.
             </p>
             <p className="text-textSecondary text-lg mb-6 leading-relaxed">
-              I'm passionate about leveraging AI to create innovative solutions, from intelligent
-              chatbots to automated recruitment systems. My goal is to push the boundaries of what's
-              possible with AI technology.
+              My bachelor's thesis used SHAP and LIME on a fine-tuned Mental-BERT model to detect
+              early depression signals from social media text, reaching 88.3% accuracy on
+              CLPsych/RSDD benchmarks. My goal is the same on every system I build: grounded,
+              measured, production-grade AI.
             </p>
 
             <div className="flex gap-8">
               <div className="text-center">
-                <div className="font-display text-4xl font-bold neon-text">4+</div>
-                <div className="text-textSecondary text-sm mt-1">Projects</div>
-              </div>
-              <div className="text-center">
-                <div className="font-display text-4xl font-bold neon-text">1+</div>
+                <div className="font-display text-4xl font-bold neon-text">3+</div>
                 <div className="text-textSecondary text-sm mt-1">Years Experience</div>
               </div>
               <div className="text-center">
-                <div className="font-display text-4xl font-bold neon-text">6+</div>
+                <div className="font-display text-4xl font-bold neon-text">7</div>
+                <div className="text-textSecondary text-sm mt-1">Projects</div>
+              </div>
+              <div className="text-center">
+                <div className="font-display text-4xl font-bold neon-text">8</div>
                 <div className="text-textSecondary text-sm mt-1">Certifications</div>
               </div>
             </div>

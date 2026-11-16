@@ -5,65 +5,65 @@ import SectionHeading from './SectionHeading'
 const Experience = () => {
   const experiences = [
     {
-      title: 'Associate Software Engineer - AI',
-      company: 'Purelogics',
-      period: 'Sept 2025 – Present',
-      description: 'Developing AI-powered solutions using machine learning, deep learning, and integrating into real-world applications with Flask, FastAPI, and Django.',
+      title: 'Associate Software Engineer (AI/ML)',
+      company: 'PureLogics, Lahore',
+      period: 'Dec 2025 – Present',
+      bullets: [
+        'Architect end-to-end RAG pipelines using hybrid BM25 + vector retrieval (ChromaDB), cross-encoder reranking, and GPT-4.1 for enterprise workflows',
+        'Prompt engineering and parameter-efficient fine-tuning (LoRA/QLoRA)',
+        'Build RESTful APIs connecting AI models with React frontends using Django REST Framework and FastAPI',
+        'Promoted from AI/ML Intern after bootcamp-to-internship track'
+      ],
       current: true
     },
     {
-      title: 'AI Intern',
-      company: 'Purelogics',
-      period: 'May 2025 – Aug 2025',
-      description: 'Completed hands-on training in ML, DL, and NLP, building and deploying AI-powered applications.',
+      title: 'AI/ML Intern',
+      company: 'PureLogics',
+      period: 'Sep 2025 – Dec 2025',
+      bullets: [
+        'Early-stage RAG pipeline development and LLM integration under senior supervision',
+        'Semantic chunking and context-budgeting to reduce hallucinations in RAG prototypes'
+      ],
       current: false
     },
     {
-      title: 'RPA Developer Intern',
-      company: 'Arcana Info',
-      period: 'Sept 2024 – Dec 2024',
-      description: 'Assisted in building RPA bots using UiPath to automate repetitive business tasks.',
+      title: 'Python + AI Bootcamp Trainee',
+      company: 'PureLogics',
+      period: 'May 2025 – Sep 2025',
+      bullets: [
+        'Intensive bootcamp: supervised/unsupervised learning, deep learning, NLP',
+        'ML models with Python, Scikit-learn, TensorFlow, PyTorch'
+      ],
+      current: false
+    },
+    {
+      title: 'Associate Software Engineer (AI/ML)',
+      company: 'MDSOL Technologies, Lahore',
+      period: 'Aug 2024 – Aug 2025',
+      bullets: [
+        'Owned model and retrieval layers across two production SaaS AI platforms serving 40+ agencies, shipped end to end; Employee of the Month',
+        "Designed Propitive's multi-agent system on LangChain and LangGraph: intent classification, 0–100 lead qualification score, confidence thresholds escalating weak evidence to a human",
+        'Hybrid retrieval (PostgreSQL + pgvector, BM25, RRF fusion, Voyage re-ranker) with strict per-agency data isolation and a provider-agnostic LLM/embedding layer',
+        'Four-stage RAG evaluation harness (DeepEval, Confident AI, LangSmith) over a 200-case golden set, 3 tenants, 3 conversation types: cut top-1 errors 80% (hit@1 0.783 → 0.957), unsupported answers on unanswerable questions 0/11 → 11/11; identified 8 backend defects, 7 fixed'
+      ],
       current: false
     }
   ]
 
   const certifications = [
-    {
-      name: 'Python + AI Bootcamp | Purelogics',
-      url: null // No URL for this one
-    },
-    {
-      name: 'Fine-Tuning for LLMs: from Beginner to Advanced',
-      url: 'https://www.linkedin.com/learning/certificates/9688c87ec55eca2b1d8bc3bd4932567f70cab3ec97a4d51e7afda0fc91ffd608'
-    },
-    {
-      name: 'Mastering Model Context Protocol (MCP)',
-      url: 'https://www.linkedin.com/learning/certificates/d0f8de2e651cb47845ecc1db0b58e517a69053cf0c84f725f1c6ed8d917e59cc'
-    },
-    {
-      name: 'Microsoft Azure Machine Learning Fundamentals',
-      url: 'https://www.linkedin.com/learning/certificates/1fd3da910535522b78140afa9d05d9b181f375b9b7360e77e329b0540ffaeca9'
-    },
-    {
-      name: 'Generative AI and LLMs: Architecture and Data Preparation',
-      url: 'https://www.coursera.org/account/accomplishments/verify/M860BOQGEW0E'
-    },
-    {
-      name: 'Introduction to Artificial Intelligence (AI)',
-      url: 'https://www.coursera.org/account/accomplishments/verify/VELOFNXKXZJA'
-    },
-    {
-      name: 'Introduction to SQL',
-      url: 'https://www.datacamp.com/completed/statement-of-accomplishment/course/6aa3427a48fc77c608163f01c7b0706c5fcb69ee'
-    },
-    {
-      name: 'Python for Beginners | SimpliLearn',
-      url: 'https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIxNzIzIiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvdGh1bWJfNzM4NzE0Ml8xNzI2NzQzNDI1LnBuZyIsInVzZXJuYW1lIjoiTXVoYW1tYWQgSGFtemEifQ%3D%3D&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion'
-    },
-    {
-      name: 'Google Soft Skills Program | Pakistan Freelancers Association',
-      url: null // No URL provided
-    }
+    { name: 'AI Engineer Agentic Track: The Complete Agent & MCP Course — Ed Donner, Ligency', url: null },
+    { name: 'AI Engineer Core Track: LLM Engineering, RAG, QLoRA, Agents — Ed Donner, Ligency', url: null },
+    { name: 'AI for Healthcare Systems Specialization — University of Colorado System', url: null },
+    { name: 'Large Language Model Operations (LLMOps) Specialization — Duke University (Coursera)', url: null },
+    { name: 'Generative AI and LLMs: Architecture and Data Preparation — IBM (Coursera)', url: null },
+    { name: 'Machine Learning Specialization — IBM', url: null },
+    { name: 'Introduction to Model Context Protocol — Anthropic (SkillJar)', url: null },
+    { name: 'Python + AI Bootcamp (Batch-5) — PureLogics', url: null }
+  ]
+
+  const honours = [
+    'PureLogics — Star of the Month, outstanding performance',
+    'COMSATS Skills Development Society — Director of Communication'
   ]
 
   return (
@@ -113,7 +113,14 @@ const Experience = () => {
                     <FaCalendar className="text-xs" />
                     <span>{exp.period}</span>
                   </div>
-                  <p className="text-textSecondary leading-relaxed">{exp.description}</p>
+                  <ul className="space-y-2">
+                    {exp.bullets.map((bullet, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm text-textSecondary leading-relaxed">
+                        <span className="text-primary mt-0.5">▸</span>
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </motion.div>
               ))}
             </div>
@@ -134,15 +141,20 @@ const Experience = () => {
               <h4 className="text-xl font-bold text-white mb-2">
                 Bachelor of Science in Computer Science
               </h4>
-              <div className="text-primary font-semibold mb-2">COMSATS University</div>
-              <div className="flex items-center gap-2 text-textSecondary text-sm">
+              <div className="text-primary font-semibold mb-2">COMSATS University Islamabad (CUI)</div>
+              <div className="flex items-center gap-2 text-textSecondary text-sm mb-2">
                 <FaCalendar className="text-xs" />
-                <span>2020 - 2024</span>
+                <span>Sep 2020 – Sep 2024 · CGPA 2.94/4.0</span>
               </div>
+              <p className="text-textSecondary text-sm leading-relaxed">
+                Thesis: Early Depression Signal Detection from Social Media Text Using Fine-Tuned
+                LLMs with Explainable AI — SHAP and LIME interpretability, 88.3% accuracy on
+                CLPsych/RSDD benchmarks.
+              </p>
             </motion.div>
 
             {/* Certifications */}
-            <div className="glass rounded-2xl p-6">
+            <div className="glass rounded-2xl p-6 mb-8">
               <h4 className="text-lg font-bold mb-4 neon-text">Certifications</h4>
               <div className="space-y-3">
                 {certifications.map((cert, index) => (
@@ -174,6 +186,19 @@ const Experience = () => {
                       </div>
                     )}
                   </motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* Honours & Awards */}
+            <div className="glass rounded-2xl p-6">
+              <h4 className="text-lg font-bold mb-4 neon-text">Honours &amp; Awards</h4>
+              <div className="space-y-3">
+                {honours.map((honour, index) => (
+                  <div key={index} className="flex items-start gap-3 text-textSecondary">
+                    <span className="text-primary mt-1">✓</span>
+                    <span className="text-sm">{honour}</span>
+                  </div>
                 ))}
               </div>
             </div>

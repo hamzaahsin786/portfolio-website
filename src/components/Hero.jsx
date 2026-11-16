@@ -59,8 +59,11 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              Specializing in Machine Learning, Deep Learning, and NLP. Building intelligent solutions
-              with cutting-edge AI technologies including LangChain, RAG pipelines, and LLMs.
+              AI Engineer with 3 years taking LLM systems from research into production. I own the
+              full lifecycle — model selection and benchmarking, fine-tuning, retrieval and evaluation
+              design, deployment, and monitoring — working to an accuracy target agreed up front
+              rather than to a demo. My experience spans LLM fine-tuning, vision-language models,
+              real-time voice agents, agentic RAG, and multi-agent systems.
             </motion.p>
 
             {/* Terminal-style card */}
@@ -79,7 +82,7 @@ const Hero = () => {
               <p className="text-slate-300">
                 <span className="text-primary">$</span> whoami
               </p>
-              <p className="text-slate-400 pl-4">&gt; ai_engineer --stack langchain,rag,llms</p>
+              <p className="text-slate-400 pl-4">&gt; ai_engineer --stack langgraph,agentic-rag,voice-ai</p>
             </motion.div>
 
             {/* CTA Buttons */}
@@ -184,7 +187,7 @@ const Hero = () => {
                 transition={{ repeat: Infinity, duration: 3 }}
                 className="absolute -top-4 -right-4 glass rounded-2xl p-4 shadow-xl"
               >
-                <div className="text-sm font-semibold text-white">AI Engineer</div>
+                <div className="text-sm font-semibold text-white">LLM Systems in Production</div>
               </motion.div>
 
               <motion.div
@@ -192,7 +195,7 @@ const Hero = () => {
                 transition={{ repeat: Infinity, duration: 3, delay: 0.5 }}
                 className="absolute -bottom-4 -left-4 glass rounded-2xl p-4 shadow-xl"
               >
-                <div className="text-sm font-semibold text-white">ML & DL Expert</div>
+                <div className="text-sm font-semibold text-white">Agentic RAG • Voice AI</div>
               </motion.div>
             </div>
           </motion.div>

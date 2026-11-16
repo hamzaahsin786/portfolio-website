@@ -1,7 +1,7 @@
 // Q&A knowledge base for the portfolio chatbot.
-// Every answer comes from Muhammad Hamza's own portfolio content:
-// role, experience, education, projects, skills, certifications and contact links.
-// No invented facts: if something is not in the profile, the bot says so
+// Every answer comes from Muhammad Hamza's current CV (Nov 2026):
+// profile, education, work, projects, skills, certifications, honours, contact.
+// No invented facts: if something is not in the CV, the bot says so
 // and points the visitor to LinkedIn or email.
 
 export const BOT_NAME = 'Hamza AI'
@@ -26,73 +26,103 @@ const INTENTS = [
     id: 'who',
     keywords: ['who are you', 'who is hamza', 'about hamza', 'about yourself', 'about you', 'tell me about yourself', 'tell me about hamza', 'introduce', 'yourself', 'who is muhammad'],
     answer:
-      "Muhammad Hamza is an AI Engineer and Software Developer from Lahore, Pakistan. He is an Associate Software Engineer (AI) at PureLogics, where he builds AI-powered solutions with machine learning, deep learning, and NLP — including LangChain, RAG pipelines, and LLMs. He holds a BS in Computer Science from COMSATS University (2020–2024).",
+      "Muhammad Hamza is an AI Engineer from Lahore, Pakistan, with 3 years taking LLM systems from research into production. He owns the full lifecycle — model selection and benchmarking, fine-tuning, retrieval and evaluation design, deployment, and monitoring — and works to an accuracy target agreed up front rather than to a demo. His experience spans LLM fine-tuning, vision-language models, real-time voice agents, agentic RAG, and multi-agent systems, served on self-hosted GPU infrastructure or hosted LLM APIs.",
   },
   {
-    id: 'work',
-    keywords: ['what do you do', 'what does he do', 'your job', 'his job', 'work', 'role', 'profession', 'occupation', 'job', 'career', 'experience', 'where do you work', 'where does he work', 'company', 'purelogics', 'current'],
+    id: 'querive',
+    keywords: ['querive'],
     answer:
-      "He is an Associate Software Engineer — AI at PureLogics (Sept 2025 – present), building AI-powered solutions with ML, deep learning, and NLP using Flask, FastAPI, and Django. Before that he was an AI Intern at PureLogics (May–Aug 2025) and an RPA Developer Intern at Arcana Info (Sept–Dec 2024), where he built UiPath bots to automate repetitive business tasks.",
+      "Querive (querive.com) is an AI Support & Lead Agent — an AI front office for SMBs answering from each business's knowledge base with cited answers. Hamza built it independently as sole AI engineer: multi-tenant hybrid retrieval (RRF fusion, Voyage re-ranker), a LangGraph agent for lead capture and escalation, and an outbound engine qualifying and routing leads in under 60 seconds. On a 125-case golden set, he benchmarked 5 models and shipped a switch cutting inference cost 78% and raising grounding accuracy 25%; validated GEval judges lifted tool-call correctness from 40% to 100%. Stack: Go, LangGraph, Agentic RAG, pgvector, BM25.",
   },
   {
-    id: 'education',
-    keywords: ['education', 'degree', 'university', 'college', 'study', 'studied', 'comsats', 'bachelor', 'bs cs', 'graduation', 'qualification'],
+    id: 'propitive',
+    keywords: ['propitive'],
     answer:
-      "He has a Bachelor of Science in Computer Science from COMSATS University, 2020–2024.",
+      "Propitive (propitive.com) is a Multi-Agent AI CRM for property-management agencies, where three autonomous agents run tenant and landlord conversations, lead qualification, and scheduled outreach against live property records, grounded in jurisdiction-narrowed retrieval. Hamza designed its multi-agent system on LangChain and LangGraph: intent classification, a 0–100 lead qualification score, and confidence thresholds escalating weak evidence to a human. Stack: Python, LangGraph, pgvector.",
   },
   {
-    id: 'tms',
-    keywords: ['tms', 'test management', 'task management system'],
+    id: 'thesis',
+    keywords: ['thesis', 'depression', 'mental-bert', 'shap', 'lime', 'explainable', 'clpsych', 'rsdd'],
     answer:
-      "TMS — Test Management System — is an intelligent task management system with AI-driven automation for task creation, prioritisation, and progress tracking. It uses LangChain and OpenAI GPT-4o for natural-language interaction, a Django REST Framework backend with PostgreSQL and role-based access control, Redis and Celery for async processing, and a React frontend.",
+      "His bachelor's thesis is 'Early Depression Signal Detection from Social Media Text Using Fine-Tuned LLMs with Explainable AI'. He applied SHAP and LIME interpretability to a fine-tuned Mental-BERT model, reaching 88.3% accuracy on CLPsych/RSDD benchmarks, with transparent predictions for potential clinical review.",
   },
   {
-    id: 'restaurant',
-    keywords: ['restaurant', 'branvelo', 'mezban', 'food', 'ordering', 'menu', 'chatbot', 'restaurant system'],
+    id: 'tms-sqa',
+    keywords: ['tms-sqa', 'tms', 'test generation', 'qa agent', 'autonomous test'],
     answer:
-      "His AI-Powered Restaurant System is an intelligent restaurant management system with a conversational AI chatbot for menu exploration and autonomous ordering. It runs on a FastAPI backend, an agentic AI chatbot built with LangGraph and GPT-4o Mini, a RAG pipeline with Pinecone for semantic search, and PostgreSQL for structured data.",
+      "The TMS-SQA Agent is an autonomous test generation system for QA teams. It generates end-to-end tests from live repositories using tree-sitter AST analysis and hybrid BM25 + ChromaDB retrieval, with context budgeting and semantic chunking to reduce hallucinations and structured output via GPT-4.1.",
+  },
+  {
+    id: 'fine-tuning',
+    keywords: ['fine-tuning', 'fine tuning', 'lora', 'qlora', 'mistral', 'pipeline'],
+    answer:
+      "His Domain-Specific LLM Fine-Tuning Pipeline uses parameter-efficient fine-tuning (LoRA / QLoRA) to adapt Mistral 7B for domain-specific NLP, bringing trainable parameters down by about 99%. The fine-tuned adapter is deployed via a FastAPI inference endpoint with streaming, and benchmarked against a GPT-3.5 baseline.",
+  },
+  {
+    id: 'production-rag',
+    keywords: ['production rag', 'rag system', 'ragas', 'latency'],
+    answer:
+      "His Production RAG System with Evaluation & Monitoring is a multi-stage RAG pipeline (ChromaDB + BM25 + cross-encoder reranking) with RAGAS evaluation across technical manuals. Context-aware query routing runs via LangGraph, and average latency is down 35% while maintaining accuracy.",
   },
   {
     id: 'talenttorch',
     keywords: ['talenttorch', 'recruitment', 'hiring', 'resume', 'candidate', 'talent'],
     answer:
-      "TalentTorch is an AI-powered recruitment platform that automates candidate-job matching through NLP and semantic similarity. It uses Django REST Framework with NLP-based skill extraction, RAG-style ranking with BAAI/bge-large-en and Mistral 7B Instruct, intelligent resume parsing, and MySQL.",
+      "TalentTorch is an AI-based recruitment system: an ML platform automating candidate-job matching via NLP skill extraction and RAG-style ranking using BAAI/bge-large-en embeddings and Mistral 7B.",
   },
   {
-    id: 'codebase',
-    keywords: ['codebase', 'code assistant', 'code analysis', 'repository'],
+    id: 'evaluation',
+    keywords: ['evaluation', 'evaluated', 'evaluate', 'deepeval', 'confident ai', 'langsmith', 'langfuse', 'judge', 'benchmark', 'benchmarking', 'golden', 'observability'],
     answer:
-      "His Intelligent Codebase Assistant lets developers query a code repository in natural language. It uses Django REST Framework with a Pinecone vector database, a dual-provider setup (OpenAI and Ollama), semantic code search with BGE-Large embeddings and LLaMA 3 8B, and a factory pattern with automatic fallback.",
+      "He evaluates his systems rigorously, working to an accuracy target agreed up front. His toolkit includes retrieval evaluation (hit@1, recall@k, precision@k, MRR, nDCG), Confident AI, LLM evaluation, LLM-as-Judge, DeepEval, LangSmith tracing, Langfuse, golden datasets, regression testing, and model benchmarking. On Propitive's four-stage RAG evaluation harness over a 200-case golden set, he cut top-1 errors 80% (hit@1 0.783 to 0.957) and took unsupported answers on unanswerable questions from 0/11 to 11/11.",
+  },
+  {
+    id: 'voice',
+    keywords: ['voice', 'voice ai', 'livekit', 'calling', 'asr', 'stt', 'tts', 'real-time voice', 'realtime voice'],
+    answer:
+      "Yes — he builds real-time voice agents and inbound calling agents on LiveKit, with ASR/STT and TTS. Voice AI is one of his core areas, alongside agentic RAG and multi-agent systems.",
+  },
+  {
+    id: 'work',
+    keywords: ['what do you do', 'what does he do', 'what does hamza do', 'your job', 'his job', 'work', 'role', 'profession', 'occupation', 'job', 'career', 'experience', 'where do you work', 'where does he work', 'company', 'purelogics', 'mdsol', 'current', 'bootcamp', 'intern'],
+    answer:
+      "He is an Associate Software Engineer (AI/ML) at PureLogics in Lahore (Dec 2025 – present), where he architects end-to-end RAG pipelines using hybrid BM25 + vector retrieval (ChromaDB), cross-encoder reranking, and GPT-4.1, plus LoRA/QLoRA fine-tuning. Before that he was an AI/ML Intern at PureLogics (Sep–Dec 2025) and a Python + AI Bootcamp Trainee (May–Sep 2025). Earlier, at MDSOL Technologies (Aug 2024 – Aug 2025), he owned the model and retrieval layers across two production SaaS AI platforms serving 40+ agencies and was Employee of the Month.",
+  },
+  {
+    id: 'education',
+    keywords: ['education', 'degree', 'university', 'college', 'study', 'studied', 'comsats', 'bachelor', 'bs cs', 'graduation', 'qualification', 'cgpa', 'coursework'],
+    answer:
+      "He has a BS in Computer Science from COMSATS University Islamabad (Sep 2020 – Sep 2024), CGPA 2.94/4.0. His thesis — Early Depression Signal Detection from Social Media Text Using Fine-Tuned LLMs with Explainable AI — reached 88.3% accuracy on CLPsych/RSDD benchmarks. Coursework: Machine Learning, Artificial Intelligence, Computer Vision, Data Structures & Algorithms, Data Science.",
   },
   {
     id: 'projects',
     keywords: ['project', 'projects', 'portfolio', 'built', 'work samples', 'show me'],
     answer:
-      "He has 4 featured projects:\n1. TMS (Test Management System) — AI task management with LangChain and GPT-4o.\n2. AI-Powered Restaurant System — conversational ordering chatbot with LangGraph and RAG.\n3. TalentTorch — AI recruitment and candidate-job matching with NLP.\n4. Intelligent Codebase Assistant — query any codebase in natural language.\nAsk me about any of them by name for details.",
+      "He has 7 key projects:\n1. Querive — AI Support & Lead Agent (querive.com).\n2. Propitive — Multi-Agent AI CRM (propitive.com).\n3. Depression Detection with Explainable AI (his thesis, 88.3% accuracy).\n4. TMS-SQA Agent — autonomous test generation.\n5. Domain-Specific LLM Fine-Tuning Pipeline (LoRA / QLoRA, Mistral 7B).\n6. Production RAG System with Evaluation & Monitoring.\n7. TalentTorch — AI recruitment system.\nAsk me about any of them by name for details.",
   },
   {
     id: 'skills',
-    keywords: ['skill', 'skills', 'tech stack', 'stack', 'technology', 'technologies', 'tools', 'python', 'langchain', 'rag', 'llm', 'machine learning', 'deep learning', 'nlp', 'django', 'fastapi', 'what can he do', 'expertise'],
+    keywords: ['skill', 'skills', 'tech stack', 'stack', 'technology', 'technologies', 'tools', 'python', 'langchain', 'langgraph', 'rag', 'llm', 'machine learning', 'deep learning', 'nlp', 'django', 'fastapi', 'go', 'vllm', 'qdrant', 'mcp', 'what can he do', 'expertise'],
     answer:
-      "His core stack is Python, LangChain, RAG pipelines, and LLMs (OpenAI GPT), with TensorFlow and PyTorch for deep learning, and Django, FastAPI, and PostgreSQL/MySQL for backends. He also works with Hugging Face Transformers, Pinecone, Whisper speech recognition, n8n workflow automation, Docker, Git, and React. Strongest areas: Python (95%), LangChain (90%), and Django (90%).",
+      "His primary stack is Python, FastAPI, LangChain, LangGraph, vLLM, LiveKit, Go, and PostgreSQL + pgvector. Around that: NLP & deep learning (PyTorch, Hugging Face Transformers, fine-tuning with LoRA/QLoRA, quantization, vision-language models), agentic AI (AI agents, multi-agent systems, agentic RAG, tool calling, re-ranking, hybrid retrieval, human-in-the-loop, MCP), voice AI (voice agents, LiveKit, ASR/STT, TTS), evaluation & observability (DeepEval, Confident AI, LangSmith, Langfuse, LLM-as-Judge), data & infrastructure (Qdrant, vector databases, GPU inference optimisation, Docker, Azure, CI/CD), and frontend/full-stack (React.js, Next.js, JavaScript, TypeScript, REST APIs).",
   },
   {
     id: 'certifications',
     keywords: ['certification', 'certifications', 'certificate', 'certificates', 'course', 'courses', 'credentials'],
     answer:
-      "He holds 9 certifications, including Fine-Tuning for LLMs (LinkedIn Learning), Mastering Model Context Protocol (MCP), Microsoft Azure Machine Learning Fundamentals, Generative AI and LLMs (Coursera), Introduction to AI (Coursera), Introduction to SQL (DataCamp), Python for Beginners (SimpliLearn), the Python + AI Bootcamp at PureLogics, and the Google Soft Skills Program. The full list with verification links is in the Experience section of this site.",
+      "He holds 8 certifications: AI Engineer Agentic Track: The Complete Agent & MCP Course (Ed Donner, Ligency); AI Engineer Core Track: LLM Engineering, RAG, QLoRA, Agents (Ed Donner, Ligency); AI for Healthcare Systems Specialization (University of Colorado System); Large Language Model Operations (LLMOps) Specialization (Duke University, Coursera); Generative AI and LLMs: Architecture and Data Preparation (IBM, Coursera); Machine Learning Specialization (IBM); Introduction to Model Context Protocol (Anthropic, SkillJar); and Python + AI Bootcamp (Batch-5) at PureLogics. The full list is in the Experience section of this site.",
   },
   {
-    id: 'workflows',
-    keywords: ['workflow', 'workflows', 'n8n', 'automation', 'automate', 'zapier', 'slack'],
+    id: 'honours',
+    keywords: ['award', 'awards', 'honour', 'honours', 'honor', 'honors', 'star of the month', 'employee of the month', 'director of communication', 'recognition'],
     answer:
-      "He builds automation workflows with n8n. Two are showcased here: a Deal Flow & Sales Pipeline Notifier (Google Sheets to Slack alerts when deal stages change) and an Upwork Job Scraper & AI Qualifier (scraping, AI lead filtering, and Slack notifications for high-quality jobs).",
+      "His honours include Star of the Month at PureLogics for outstanding performance, and Director of Communication at the COMSATS Skills Development Society. At MDSOL Technologies he was also Employee of the Month.",
   },
   {
     id: 'contact',
-    keywords: ['contact', 'reach', 'email', 'mail', 'hire', 'hiring', 'whatsapp', 'linkedin', 'github', 'phone', 'message', 'talk to him', 'get in touch', 'social'],
+    keywords: ['contact', 'reach', 'email', 'mail', 'hire', 'hiring', 'whatsapp', 'linkedin', 'github', 'phone', 'message', 'talk to him', 'get in touch', 'social', 'portfolio link', 'website'],
     answer:
-      "You can reach him by email at hamzaahsin786@gmail.com, on LinkedIn (linkedin.com/in/hamzaahsin), on GitHub (github.com/hamzaahsin786), or on WhatsApp at +92 313 7791392.",
+      "You can reach him by email at hamzaahsin786@gmail.com, on LinkedIn (linkedin.com/in/hamzaahsin), on GitHub (github.com/hamzaahsin786), on WhatsApp at +92 313 7791392, or through his portfolio at mhamza-aiengineer.vercel.app.",
   },
   {
     id: 'cv',
@@ -116,7 +146,7 @@ const INTENTS = [
     id: 'availability',
     keywords: ['available', 'availability', 'freelance', 'open to work', 'looking for', 'job opportunity', 'opportunity'],
     answer:
-      "He is currently working as an Associate Software Engineer (AI) at PureLogics. For work inquiries or opportunities, the best way is to message him on LinkedIn or email hamzaahsin786@gmail.com.",
+      "He is currently working as an Associate Software Engineer (AI/ML) at PureLogics. For work inquiries or opportunities, the best way is to message him on LinkedIn or email hamzaahsin786@gmail.com.",
   },
 ]
 

@@ -1,61 +1,99 @@
 import { motion } from 'framer-motion'
-import { FaReact, FaPython, FaDatabase, FaRobot, FaBrain } from 'react-icons/fa'
-import { SiDjango, SiFastapi, SiPostgresql, SiOpenai } from 'react-icons/si'
+import { FaRobot, FaBrain, FaDatabase, FaFlask, FaChartLine, FaGraduationCap, FaComments } from 'react-icons/fa'
+import { SiDjango } from 'react-icons/si'
 import SectionHeading from './SectionHeading'
 
 const Projects = () => {
   const projects = [
     {
-      title: 'Test Management System (TMS)',
-      description: 'An intelligent Task Management System integrating AI-driven automation for task creation, prioritization, and progress tracking.',
+      title: 'Querive — AI Support & Lead Agent',
+      link: 'https://querive.com',
+      description: "AI front office for SMBs answering from each business's knowledge base with cited answers. Built independently as sole AI engineer.",
       highlights: [
-        'AI assistance using LangChain and OpenAI GPT-4o for natural-language interaction',
-        'Django REST Framework backend with PostgreSQL and role-based access control',
-        'Asynchronous processing with Redis and Celery for notifications and analytics',
-        'React-based frontend with seamless API integration'
+        'Multi-tenant hybrid retrieval (RRF fusion, Voyage re-ranker) with LangGraph agent for lead capture and escalation',
+        'Outbound engine qualifying and routing leads in under 60 seconds',
+        'On a 125-case golden set, benchmarked 5 models and shipped a switch cutting inference cost 78% and raising grounding accuracy 25%',
+        'Validated GEval judges lifted tool-call correctness from 40% to 100%'
       ],
-      tech: ['Django', 'PostgreSQL', 'React', 'LangChain', 'GPT-4o', 'Redis', 'Celery'],
-      icon: <FaBrain />,
+      tech: ['Go', 'LangGraph', 'Agentic RAG', 'pgvector', 'BM25'],
+      icon: <FaComments />,
       gradient: 'from-cyan-500/25 to-blue-500/25'
     },
     {
-      title: 'AI-Powered Restaurant System',
-      description: 'Intelligent restaurant management system with conversational AI chatbot for menu exploration and autonomous ordering.',
+      title: 'Propitive — Multi-Agent AI CRM',
+      link: 'https://propitive.com',
+      description: 'CRM for property-management agencies where three autonomous agents run tenant and landlord conversations, lead qualification, and scheduled outreach against live property records.',
       highlights: [
-        'FastAPI backend with high-performance RESTful APIs',
-        'Agentic AI chatbot using LangGraph and GPT-4o Mini',
-        'RAG pipeline with Pinecone vector database for semantic search',
-        'PostgreSQL integration for structured data and metadata intelligence'
+        'Three autonomous agents for tenant and landlord conversations, lead qualification, and scheduled outreach',
+        'Multi-agent system on LangChain and LangGraph with intent classification and a 0–100 lead qualification score',
+        'Confidence thresholds escalate weak evidence to a human',
+        'Grounded in jurisdiction-narrowed retrieval'
       ],
-      tech: ['FastAPI', 'LangGraph', 'Pinecone', 'GPT-4o', 'PostgreSQL'],
+      tech: ['Python', 'LangGraph', 'pgvector'],
       icon: <FaRobot />,
       gradient: 'from-violet-500/25 to-fuchsia-500/25'
     },
     {
-      title: 'TalentTorch - AI Recruitment System',
-      description: 'AI-powered recruitment platform automating candidate-job matching through NLP and semantic similarity.',
+      title: 'Depression Detection with Explainable AI',
+      description: 'Thesis project: early depression signal detection from social media text using fine-tuned LLMs with explainable AI.',
       highlights: [
-        'Django REST Framework with NLP-based skill extraction',
-        'RAG-style ranking using BAAI/bge-large-en and Mistral 7B Instruct',
-        'Intelligent resume parsing and contextual job matching',
-        'MySQL integration with modular APIs for scalable search'
+        'SHAP and LIME interpretability on a fine-tuned Mental-BERT model',
+        '88.3% accuracy on CLPsych/RSDD benchmarks',
+        'Transparent predictions for potential clinical review'
       ],
-      tech: ['Django', 'NLP', 'Mistral 7B', 'MySQL', 'RAG'],
-      icon: <SiDjango />,
+      tech: ['Mental-BERT', 'SHAP', 'LIME', 'Fine-Tuning'],
+      icon: <FaGraduationCap />,
       gradient: 'from-emerald-500/25 to-cyan-500/25'
     },
     {
-      title: 'Intelligent Codebase Assistant',
-      description: 'AI-powered codebase analysis system enabling developers to query repositories in natural language.',
+      title: 'TMS-SQA Agent — Autonomous Test Generation',
+      description: 'Autonomous AI agent for QA teams, generating end-to-end tests from live repositories.',
       highlights: [
-        'Django REST Framework with Pinecone vector database',
-        'Dual-provider architecture: OpenAI (paid) and Ollama (free)',
-        'Semantic code search with BGE-Large embeddings and LLaMA 3 8B',
-        'Factory design pattern with automatic fallback and hybrid chat completion'
+        'End-to-end test generation from live repositories using tree-sitter AST analysis',
+        'Hybrid BM25 + ChromaDB retrieval',
+        'Context budgeting and semantic chunking to reduce hallucinations',
+        'Structured output via GPT-4.1'
       ],
-      tech: ['Django', 'Pinecone', 'GPT-4o', 'LLaMA 3', 'Ollama'],
-      icon: <FaDatabase />,
+      tech: ['GPT-4.1', 'tree-sitter', 'ChromaDB', 'BM25'],
+      icon: <FaFlask />,
       gradient: 'from-amber-500/25 to-violet-500/25'
+    },
+    {
+      title: 'Domain-Specific LLM Fine-Tuning Pipeline',
+      description: 'Parameter-efficient fine-tuning pipeline adapting Mistral 7B for domain-specific NLP.',
+      highlights: [
+        'LoRA / QLoRA fine-tuning with trainable parameters down ~99%',
+        'Fine-tuned adapter deployed via FastAPI inference endpoint with streaming',
+        'Benchmarked against a GPT-3.5 baseline'
+      ],
+      tech: ['Mistral 7B', 'LoRA', 'QLoRA', 'FastAPI'],
+      icon: <FaBrain />,
+      gradient: 'from-cyan-500/25 to-violet-500/25'
+    },
+    {
+      title: 'Production RAG System with Evaluation & Monitoring',
+      description: 'Multi-stage RAG pipeline with evaluation across technical manuals, built for production use.',
+      highlights: [
+        'Multi-stage RAG pipeline: ChromaDB + BM25 + cross-encoder reranking',
+        'RAGAS evaluation across technical manuals',
+        'Context-aware query routing via LangGraph',
+        'Average latency down 35% while maintaining accuracy'
+      ],
+      tech: ['ChromaDB', 'BM25', 'RAGAS', 'LangGraph'],
+      icon: <FaChartLine />,
+      gradient: 'from-violet-500/25 to-cyan-500/25'
+    },
+    {
+      title: 'TalentTorch — AI Recruitment System',
+      description: 'ML recruitment platform automating candidate-job matching via NLP skill extraction and RAG-style ranking.',
+      highlights: [
+        'NLP-based skill extraction from resumes',
+        'RAG-style ranking using BAAI/bge-large-en embeddings',
+        'Mistral 7B for contextual job matching'
+      ],
+      tech: ['NLP', 'BAAI/bge-large-en', 'Mistral 7B', 'RAG'],
+      icon: <SiDjango />,
+      gradient: 'from-emerald-500/25 to-cyan-500/25'
     }
   ]
 
@@ -101,6 +139,16 @@ const Projects = () => {
                       <h3 className="font-display text-2xl font-bold text-white">
                         {project.title}
                       </h3>
+                      {project.link && (
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-mono text-xs tracking-wider text-primary hover:underline"
+                        >
+                          {project.link.replace('https://', '')} ↗
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>

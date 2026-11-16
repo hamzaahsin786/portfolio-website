@@ -1,79 +1,51 @@
 import { motion } from 'framer-motion'
-import {
-  SiPython, SiTensorflow, SiPytorch, SiDjango, SiFastapi,
-  SiPostgresql, SiMysql, SiGit, SiDocker, SiReact,
-  SiJupyter, SiPandas, SiNumpy
-} from 'react-icons/si'
-import { FaBrain, FaRobot, FaCode, FaDatabase, FaChartLine, FaMicrophone, FaLaptopCode, FaProjectDiagram } from 'react-icons/fa'
+import { FaBrain, FaRobot, FaCode, FaDatabase, FaChartLine, FaMicrophone, FaLaptopCode } from 'react-icons/fa'
 import SectionHeading from './SectionHeading'
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: 'Machine Learning & Data Science',
-      icon: <FaBrain />,
-      gradient: 'from-cyan-400 to-blue-500',
-      skills: [
-        { name: 'Python', icon: <SiPython />, level: 95 },
-        { name: 'Pandas', icon: <SiPandas />, level: 90 },
-        { name: 'NumPy', icon: <SiNumpy />, level: 90 },
-        { name: 'Scikit-learn', icon: <FaChartLine />, level: 85 },
-        { name: 'SQL', icon: <FaDatabase />, level: 85 },
-      ]
-    },
-    {
-      title: 'Deep Learning & AI',
-      icon: <FaRobot />,
-      gradient: 'from-violet-400 to-fuchsia-500',
-      skills: [
-        { name: 'TensorFlow', icon: <SiTensorflow />, level: 85 },
-        { name: 'PyTorch', icon: <SiPytorch />, level: 85 },
-        { name: 'LangChain', icon: <FaBrain />, level: 90 },
-        { name: 'OpenAI GPT', icon: <FaRobot />, level: 90 },
-        { name: 'RAG Pipelines', icon: <FaDatabase />, level: 88 },
-      ]
-    },
-    {
-      title: 'Backend & APIs',
+      title: 'Primary Stack',
       icon: <FaCode />,
-      gradient: 'from-emerald-400 to-cyan-500',
-      skills: [
-        { name: 'Django', icon: <SiDjango />, level: 90 },
-        { name: 'FastAPI', icon: <SiFastapi />, level: 88 },
-        { name: 'PostgreSQL', icon: <SiPostgresql />, level: 85 },
-        { name: 'MySQL', icon: <SiMysql />, level: 82 },
-        { name: 'REST APIs', icon: <FaCode />, level: 90 },
-      ]
+      gradient: 'from-cyan-400 to-blue-500',
+      skills: ['Python', 'FastAPI', 'LangChain', 'LangGraph', 'vLLM', 'LiveKit', 'Go', 'PostgreSQL + pgvector']
     },
     {
-      title: 'Tools & Technologies',
-      icon: <FaChartLine />,
+      title: 'NLP & Deep Learning',
+      icon: <FaBrain />,
+      gradient: 'from-violet-400 to-fuchsia-500',
+      skills: ['PyTorch', 'Hugging Face Transformers', 'LLMs', 'Fine-Tuning (LoRA / QLoRA)', 'Quantization', 'Vision-Language Models (VLMs)', 'NLP', 'GRU / RNN']
+    },
+    {
+      title: 'Agentic AI',
+      icon: <FaRobot />,
+      gradient: 'from-emerald-400 to-cyan-500',
+      skills: ['AI Agents', 'Multi-Agent Systems', 'Agentic RAG', 'RAG', 'Tool Calling', 'Re-ranking', 'Hybrid Retrieval', 'Human-in-the-Loop', 'Model Context Protocol (MCP)']
+    },
+    {
+      title: 'Voice AI',
+      icon: <FaMicrophone />,
       gradient: 'from-amber-400 to-violet-500',
-      skills: [
-        { name: 'Git', icon: <SiGit />, level: 90 },
-        { name: 'VS Code', icon: <FaLaptopCode />, level: 95 },
-        { name: 'n8n', icon: <FaProjectDiagram />, level: 85 },
-        { name: 'Jupyter', icon: <SiJupyter />, level: 90 },
-        { name: 'Docker', icon: <SiDocker />, level: 75 },
-        { name: 'React', icon: <SiReact />, level: 80 },
-      ]
+      skills: ['Voice Agents', 'Inbound Calling Agents', 'LiveKit', 'ASR / STT', 'TTS']
+    },
+    {
+      title: 'Evaluation & Observability',
+      icon: <FaChartLine />,
+      gradient: 'from-cyan-400 to-violet-500',
+      skills: ['Retrieval Evaluation (hit@1, recall@k, precision@k, MRR, nDCG)', 'Confident AI', 'LLM Evaluation', 'LLM-as-Judge', 'DeepEval', 'LangSmith Tracing', 'Langfuse', 'Golden Datasets', 'Regression Testing', 'Model Benchmarking']
+    },
+    {
+      title: 'Data & Infrastructure',
+      icon: <FaDatabase />,
+      gradient: 'from-violet-400 to-cyan-500',
+      skills: ['SQL', 'BM25', 'Vector Databases', 'Qdrant', 'GPU Inference Optimisation', 'Model Serving', 'Docker', 'Microsoft Azure', 'CI/CD', 'Git / GitHub', 'Hugging Face']
+    },
+    {
+      title: 'Frontend & Full-Stack',
+      icon: <FaLaptopCode />,
+      gradient: 'from-emerald-400 to-violet-500',
+      skills: ['React.js', 'Next.js', 'JavaScript', 'TypeScript', 'REST APIs']
     }
-  ]
-
-  const additionalSkills = [
-    'NLP & Text Processing',
-    'Hugging Face Transformers',
-    'Vector Databases (Pinecone)',
-    'Speech Recognition (Whisper, Vosk)',
-    'Prompt Engineering',
-    'Model Fine-tuning',
-    'n8n Workflow Automation',
-    'Data Visualization (Matplotlib, Seaborn)',
-    'Power BI',
-    'Bash Scripting',
-    'Postman',
-    'GitHub Copilot',
-    'Claude Code'
   ]
 
   return (
@@ -84,11 +56,11 @@ const Skills = () => {
           eyebrow="SKILLS"
           title="Skills &"
           highlight="Expertise"
-          subtitle="Comprehensive technical skills across AI, ML, and modern software development"
+          subtitle="The stack behind production LLM systems — from model and retrieval to evaluation and serving"
         />
 
-        {/* Main Skill Categories */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        {/* Skill Groups */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {skillCategories.map((category, catIndex) => (
             <motion.div
               key={catIndex}
@@ -106,65 +78,25 @@ const Skills = () => {
                 <h3 className="text-xl font-bold text-white">{category.title}</h3>
               </div>
 
-              {/* Skills List */}
-              <div className="space-y-4">
+              {/* Skill Chips */}
+              <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex}>
-                    <div className="flex items-center justify-between mb-2">
-                      <div className="flex items-center gap-2">
-                        <span className={`text-lg bg-gradient-to-r ${category.gradient} bg-clip-text text-transparent`}>
-                          {skill.icon}
-                        </span>
-                        <span className="text-sm font-medium text-textSecondary">
-                          {skill.name}
-                        </span>
-                      </div>
-                      <span className="font-mono text-xs text-primary">{skill.level}%</span>
-                    </div>
-
-                    {/* Glowing Progress Bar */}
-                    <div className="w-full bg-white/5 border border-white/5 rounded-full h-2 overflow-hidden">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1, delay: catIndex * 0.1 + skillIndex * 0.1 }}
-                        className="h-full bg-gradient-to-r from-cyan-400 to-violet-500 rounded-full shadow-[0_0_12px_rgba(34,211,238,0.6)]"
-                      />
-                    </div>
-                  </div>
+                  <motion.span
+                    key={skillIndex}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: skillIndex * 0.04 }}
+                    whileHover={{ scale: 1.06, y: -2 }}
+                    className="px-3 py-1.5 bg-primary/10 text-primary text-xs font-medium rounded-full border border-primary/20 hover:border-primary/50 transition-all cursor-default"
+                  >
+                    {skill}
+                  </motion.span>
                 ))}
               </div>
             </motion.div>
           ))}
         </div>
-
-        {/* Additional Skills */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="glass rounded-2xl p-8 bg-gradient-to-br from-primary/[0.06] to-secondary/[0.06]"
-        >
-          <h3 className="font-display text-2xl font-bold mb-6 text-center neon-text">
-            Additional Technologies & Tools
-          </h3>
-          <div className="flex flex-wrap gap-3 justify-center">
-            {additionalSkills.map((skill, index) => (
-              <motion.span
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
-                whileHover={{ scale: 1.08, y: -3 }}
-                className="px-4 py-2 glass rounded-full text-sm font-medium text-textPrimary hover:border-primary/60 hover:text-primary transition-all cursor-default"
-              >
-                {skill}
-              </motion.span>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   )
