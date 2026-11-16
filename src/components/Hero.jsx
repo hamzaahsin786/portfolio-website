@@ -155,7 +155,7 @@ const Hero = () => {
               {/* HUD frame */}
               <div className="relative hud-corner scanline rounded-3xl border border-primary/30 bg-panel/80 overflow-hidden">
                 <img
-                  src="/profile.jpg"
+                  src="/Picture_Muhammad_Hamza.jpg"
                   alt="Muhammad Hamza"
                   className="w-full h-auto object-cover aspect-square"
                   onError={(e) => {

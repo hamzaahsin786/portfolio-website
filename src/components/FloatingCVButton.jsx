@@ -8,7 +8,7 @@ const FloatingCVButton = () => {
   const handleDownload = () => {
     // This will download the CV from the public folder
     const link = document.createElement('a')
-    link.href = '/Muhammad Hamza-AI Engineeer.pdf'
+    link.href = '/CV_Muhammad_Hamza%20(2).pdf'
     link.download = 'Muhammad_Hamza_AI_Engineer_CV.pdf'
     document.body.appendChild(link)
     link.click()
