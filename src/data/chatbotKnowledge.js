@@ -26,19 +26,19 @@ const INTENTS = [
     id: 'who',
     keywords: ['who are you', 'who is hamza', 'about hamza', 'about yourself', 'about you', 'tell me about yourself', 'tell me about hamza', 'introduce', 'yourself', 'who is muhammad'],
     answer:
-      "Muhammad Hamza is an AI Engineer from Lahore, Pakistan, with 3 years taking LLM systems from research into production. He owns the full lifecycle — model selection and benchmarking, fine-tuning, retrieval and evaluation design, deployment, and monitoring — and works to an accuracy target agreed up front rather than to a demo. His experience spans LLM fine-tuning, vision-language models, real-time voice agents, agentic RAG, and multi-agent systems, served on self-hosted GPU infrastructure or hosted LLM APIs.",
+      "Muhammad Hamza is an AI Engineer from Lahore, Pakistan, with 3 years taking LLM systems from research into production.\nHe owns the full lifecycle: model selection and benchmarking, fine-tuning, retrieval and evaluation design, deployment, and monitoring.\nHis core areas are LLM fine-tuning, vision-language models, real-time voice agents, agentic RAG, and multi-agent systems.",
   },
   {
     id: 'querive',
     keywords: ['querive'],
     answer:
-      "Querive (querive.com) is an AI Support & Lead Agent — an AI front office for SMBs answering from each business's knowledge base with cited answers. Hamza built it independently as sole AI engineer: multi-tenant hybrid retrieval (RRF fusion, Voyage re-ranker), a LangGraph agent for lead capture and escalation, and an outbound engine qualifying and routing leads in under 60 seconds. On a 125-case golden set, he benchmarked 5 models and shipped a switch cutting inference cost 78% and raising grounding accuracy 25%; validated GEval judges lifted tool-call correctness from 40% to 100%. Stack: Go, LangGraph, Agentic RAG, pgvector, BM25.",
+      "Querive (querive.com) is an AI Support & Lead Agent for SMBs, answering from each business's knowledge base with cited answers. Hamza built it alone as sole AI engineer.\nIt uses multi-tenant hybrid retrieval (RRF fusion, Voyage re-ranker), a LangGraph agent for lead capture, and an outbound engine routing leads in under 60 seconds.\nResults: inference cost down 78%, grounding accuracy up 25%, tool-call correctness 40% to 100%.\nStack: Go, LangGraph, Agentic RAG, pgvector, BM25.",
   },
   {
     id: 'propitive',
     keywords: ['propitive'],
     answer:
-      "Propitive (propitive.com) is a Multi-Agent AI CRM for property-management agencies, where three autonomous agents run tenant and landlord conversations, lead qualification, and scheduled outreach against live property records, grounded in jurisdiction-narrowed retrieval. Hamza designed its multi-agent system on LangChain and LangGraph: intent classification, a 0–100 lead qualification score, and confidence thresholds escalating weak evidence to a human. Stack: Python, LangGraph, pgvector.",
+      "Propitive (propitive.com) is a Multi-Agent AI CRM for property-management agencies. Three autonomous agents run tenant and landlord conversations, lead qualification, and scheduled outreach.\nHamza designed the multi-agent system (LangChain, LangGraph): intent classification, a 0–100 lead qualification score, and confidence thresholds that escalate weak evidence to a human.\nStack: Python, LangGraph, pgvector.",
   },
   {
     id: 'thesis',
@@ -74,7 +74,7 @@ const INTENTS = [
     id: 'evaluation',
     keywords: ['evaluation', 'evaluated', 'evaluate', 'deepeval', 'confident ai', 'langsmith', 'langfuse', 'judge', 'benchmark', 'benchmarking', 'golden', 'observability'],
     answer:
-      "He evaluates his systems rigorously, working to an accuracy target agreed up front. His toolkit includes retrieval evaluation (hit@1, recall@k, precision@k, MRR, nDCG), Confident AI, LLM evaluation, LLM-as-Judge, DeepEval, LangSmith tracing, Langfuse, golden datasets, regression testing, and model benchmarking. On Propitive's four-stage RAG evaluation harness over a 200-case golden set, he cut top-1 errors 80% (hit@1 0.783 to 0.957) and took unsupported answers on unanswerable questions from 0/11 to 11/11.",
+      "He works to an accuracy target agreed up front. His toolkit: hit@1, recall@k, precision@k, MRR, nDCG, DeepEval, Confident AI, LangSmith, Langfuse, LLM-as-Judge, golden datasets, regression testing.\nOn Propitive he cut top-1 errors 80% (hit@1 0.783 to 0.957) and took unsupported answers on unanswerable questions from 0/11 to 11/11.",
   },
   {
     id: 'voice',
@@ -86,7 +86,7 @@ const INTENTS = [
     id: 'work',
     keywords: ['what do you do', 'what does he do', 'what does hamza do', 'your job', 'his job', 'work', 'role', 'profession', 'occupation', 'job', 'career', 'experience', 'where do you work', 'where does he work', 'company', 'purelogics', 'mdsol', 'current', 'bootcamp', 'intern'],
     answer:
-      "He is an Associate Software Engineer (AI/ML) at PureLogics in Lahore (Dec 2025 – present), where he architects end-to-end RAG pipelines using hybrid BM25 + vector retrieval (ChromaDB), cross-encoder reranking, and GPT-4.1, plus LoRA/QLoRA fine-tuning. Before that he was an AI/ML Intern at PureLogics (Sep–Dec 2025) and a Python + AI Bootcamp Trainee (May–Sep 2025). Earlier, at MDSOL Technologies (Aug 2024 – Aug 2025), he owned the model and retrieval layers across two production SaaS AI platforms serving 40+ agencies and was Employee of the Month.",
+      "Associate Software Engineer (AI/ML) at PureLogics, Lahore — Dec 2025 to present. He architects end-to-end RAG pipelines (hybrid BM25 + vector retrieval, cross-encoder reranking, GPT-4.1) and does LoRA/QLoRA fine-tuning.\nBefore that: AI/ML Intern at PureLogics (Sep–Dec 2025) and Python + AI Bootcamp Trainee (May–Sep 2025).\nEarlier: MDSOL Technologies (Aug 2024 – Aug 2025), where he owned the model and retrieval layers of two production SaaS AI platforms serving 40+ agencies.",
   },
   {
     id: 'education',
@@ -104,13 +104,13 @@ const INTENTS = [
     id: 'skills',
     keywords: ['skill', 'skills', 'tech stack', 'stack', 'technology', 'technologies', 'tools', 'python', 'langchain', 'langgraph', 'rag', 'llm', 'machine learning', 'deep learning', 'nlp', 'django', 'fastapi', 'go', 'vllm', 'qdrant', 'mcp', 'what can he do', 'expertise'],
     answer:
-      "His primary stack is Python, FastAPI, LangChain, LangGraph, vLLM, LiveKit, Go, and PostgreSQL + pgvector. Around that: NLP & deep learning (PyTorch, Hugging Face Transformers, fine-tuning with LoRA/QLoRA, quantization, vision-language models), agentic AI (AI agents, multi-agent systems, agentic RAG, tool calling, re-ranking, hybrid retrieval, human-in-the-loop, MCP), voice AI (voice agents, LiveKit, ASR/STT, TTS), evaluation & observability (DeepEval, Confident AI, LangSmith, Langfuse, LLM-as-Judge), data & infrastructure (Qdrant, vector databases, GPU inference optimisation, Docker, Azure, CI/CD), and frontend/full-stack (React.js, Next.js, JavaScript, TypeScript, REST APIs).",
+      "Primary stack: Python, FastAPI, LangChain, LangGraph, vLLM, LiveKit, Go, PostgreSQL + pgvector.\nAlso: NLP & deep learning (PyTorch, Hugging Face Transformers, LoRA/QLoRA, VLMs), agentic AI (multi-agent systems, agentic RAG, MCP), voice AI (LiveKit, ASR/STT, TTS), and evaluation (DeepEval, Confident AI, LangSmith, Langfuse).\nPlus data & infra (Qdrant, Docker, Azure, CI/CD) and frontend (React, Next.js, TypeScript).",
   },
   {
     id: 'certifications',
     keywords: ['certification', 'certifications', 'certificate', 'certificates', 'course', 'courses', 'credentials'],
     answer:
-      "He holds 8 certifications: AI Engineer Agentic Track: The Complete Agent & MCP Course (Ed Donner, Ligency); AI Engineer Core Track: LLM Engineering, RAG, QLoRA, Agents (Ed Donner, Ligency); AI for Healthcare Systems Specialization (University of Colorado System); Large Language Model Operations (LLMOps) Specialization (Duke University, Coursera); Generative AI and LLMs: Architecture and Data Preparation (IBM, Coursera); Machine Learning Specialization (IBM); Introduction to Model Context Protocol (Anthropic, SkillJar); and Python + AI Bootcamp (Batch-5) at PureLogics. The full list is in the Experience section of this site.",
+      "He holds 8 certifications:\n• AI Engineer Agentic Track (Ed Donner, Ligency)\n• AI Engineer Core Track (Ed Donner, Ligency)\n• AI for Healthcare Systems (University of Colorado)\n• LLMOps Specialization (Duke, Coursera)\n• Generative AI and LLMs (IBM, Coursera)\n• Machine Learning Specialization (IBM)\n• Introduction to MCP (Anthropic, SkillJar)\n• Python + AI Bootcamp (PureLogics)",
   },
   {
     id: 'honours',
@@ -153,6 +153,17 @@ const INTENTS = [
 const FALLBACK =
   "I can only answer from Hamza's profile — his work, projects, skills, education, certifications, and contact details. Try asking, for example: 'What are his skills?' or 'Show me his projects.'"
 
+// Salary is not in the CV: answer it directly, before any other intent
+// can claim the question (e.g. 'current' matching the work intent).
+// Includes common misspellings like 'slary'.
+const SALARY_KEYWORDS = [
+  'salary', 'slary', 'salry', 'sallery', 'salery',
+  'pay', 'income', 'earn', 'earnings', 'wage', 'wages',
+  'compensation', 'ctc', 'remuneration',
+]
+const SALARY_ANSWER =
+  "His salary isn't in his public profile, so I can't share it. To discuss compensation, message him on LinkedIn (linkedin.com/in/hamzaahsin) or email hamzaahsin786@gmail.com."
+
 function normalize(text) {
   return text
     .toLowerCase()
@@ -171,6 +182,10 @@ function keywordMatches(text, keyword) {
 export function answerQuestion(rawText) {
   const text = normalize(rawText || '')
   if (!text) return FALLBACK
+
+  // Salary guard: checked before the scoring loop so no other
+  // intent (e.g. 'current' -> work) can steal a salary question.
+  if (SALARY_KEYWORDS.some((keyword) => keywordMatches(text, keyword))) return SALARY_ANSWER
 
   let best = null
   let bestScore = 0

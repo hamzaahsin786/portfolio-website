@@ -62,7 +62,7 @@ const ChatBot = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 40, scale: 0.95 }}
             transition={{ duration: 0.25 }}
-            className="fixed bottom-24 left-4 sm:left-8 z-50 flex h-[480px] max-h-[70vh] w-[calc(100vw-2rem)] max-w-sm flex-col overflow-hidden rounded-3xl border border-white/10 bg-panel/95 shadow-2xl shadow-black/60 backdrop-blur-xl"
+            className="fixed bottom-24 left-4 sm:left-8 z-50 flex h-[560px] max-h-[80vh] w-[calc(100vw-2rem)] max-w-sm flex-col overflow-hidden rounded-3xl border border-white/10 bg-panel/95 shadow-2xl shadow-black/60 backdrop-blur-xl"
             role="dialog"
             aria-label="Chat with Hamza AI"
           >
