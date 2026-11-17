@@ -21,7 +21,7 @@ const SectionHeading = ({ index, eyebrow, title, highlight, subtitle }) => {
       className="text-center mb-16"
     >
       <p className="font-mono text-xs sm:text-sm tracking-[0.3em] text-primary/80 uppercase mb-4">
-        {`// ${index} — ${eyebrow}`}
+        {`// ${index} - ${eyebrow}`}
       </p>
       <h2 className="font-display text-4xl md:text-5xl font-bold mb-5 text-white">
         {title} <span className="neon-text">{highlight}</span>

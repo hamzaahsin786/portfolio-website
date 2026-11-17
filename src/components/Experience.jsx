@@ -7,7 +7,7 @@ const Experience = () => {
     {
       title: 'Associate Software Engineer (AI/ML)',
       company: 'PureLogics, Lahore',
-      period: 'Dec 2025 – Present',
+      period: 'Dec 2025 - Present',
       bullets: [
         'Architect end-to-end RAG pipelines using hybrid BM25 + vector retrieval (ChromaDB), cross-encoder reranking, and GPT-4.1 for enterprise workflows',
         'Prompt engineering and parameter-efficient fine-tuning (LoRA/QLoRA)',
@@ -19,7 +19,7 @@ const Experience = () => {
     {
       title: 'AI/ML Intern',
       company: 'PureLogics',
-      period: 'Sep 2025 – Dec 2025',
+      period: 'Sep 2025 - Dec 2025',
       bullets: [
         'Early-stage RAG pipeline development and LLM integration under senior supervision',
         'Semantic chunking and context-budgeting to reduce hallucinations in RAG prototypes'
@@ -29,7 +29,7 @@ const Experience = () => {
     {
       title: 'Python + AI Bootcamp Trainee',
       company: 'PureLogics',
-      period: 'May 2025 – Sep 2025',
+      period: 'May 2025 - Sep 2025',
       bullets: [
         'Intensive bootcamp: supervised/unsupervised learning, deep learning, NLP',
         'ML models with Python, Scikit-learn, TensorFlow, PyTorch'
@@ -39,31 +39,31 @@ const Experience = () => {
     {
       title: 'Associate Software Engineer (AI/ML)',
       company: 'MDSOL Technologies, Lahore',
-      period: 'Aug 2024 – Aug 2025',
+      period: 'Aug 2024 - Aug 2025',
       bullets: [
         'Owned model and retrieval layers across two production SaaS AI platforms serving 40+ agencies, shipped end to end; Employee of the Month',
-        "Designed Propitive's multi-agent system on LangChain and LangGraph: intent classification, 0–100 lead qualification score, confidence thresholds escalating weak evidence to a human",
+        "Designed Propitive's multi-agent system on LangChain and LangGraph: intent classification, 0-100 lead qualification score, confidence thresholds escalating weak evidence to a human",
         'Hybrid retrieval (PostgreSQL + pgvector, BM25, RRF fusion, Voyage re-ranker) with strict per-agency data isolation and a provider-agnostic LLM/embedding layer',
-        'Four-stage RAG evaluation harness (DeepEval, Confident AI, LangSmith) over a 200-case golden set, 3 tenants, 3 conversation types: cut top-1 errors 80% (hit@1 0.783 → 0.957), unsupported answers on unanswerable questions 0/11 → 11/11; identified 8 backend defects, 7 fixed'
+        'Four-stage RAG evaluation harness (DeepEval, Confident AI, LangSmith) over a 200-case golden set, 3 tenants, 3 conversation types: cut top-1 errors 80% (hit@1 0.783 to 0.957), unsupported answers on unanswerable questions 0/11 to 11/11; identified 8 backend defects, 7 fixed'
       ],
       current: false
     }
   ]
 
   const certifications = [
-    { name: 'AI Engineer Agentic Track: The Complete Agent & MCP Course — Ed Donner, Ligency', url: null },
-    { name: 'AI Engineer Core Track: LLM Engineering, RAG, QLoRA, Agents — Ed Donner, Ligency', url: null },
-    { name: 'AI for Healthcare Systems Specialization — University of Colorado System', url: null },
-    { name: 'Large Language Model Operations (LLMOps) Specialization — Duke University (Coursera)', url: null },
-    { name: 'Generative AI and LLMs: Architecture and Data Preparation — IBM (Coursera)', url: null },
-    { name: 'Machine Learning Specialization — IBM', url: null },
-    { name: 'Introduction to Model Context Protocol — Anthropic (SkillJar)', url: null },
-    { name: 'Python + AI Bootcamp (Batch-5) — PureLogics', url: null }
+    { name: 'AI Engineer Agentic Track: The Complete Agent & MCP Course, Ed Donner, Ligency', url: null },
+    { name: 'AI Engineer Core Track: LLM Engineering, RAG, QLoRA, Agents, Ed Donner, Ligency', url: null },
+    { name: 'AI for Healthcare Systems Specialization, University of Colorado System', url: null },
+    { name: 'Large Language Model Operations (LLMOps) Specialization, Duke University (Coursera)', url: null },
+    { name: 'Generative AI and LLMs: Architecture and Data Preparation, IBM (Coursera)', url: null },
+    { name: 'Machine Learning Specialization, IBM', url: null },
+    { name: 'Introduction to Model Context Protocol, Anthropic (SkillJar)', url: null },
+    { name: 'Python + AI Bootcamp (Batch-5), PureLogics', url: null }
   ]
 
   const honours = [
-    'PureLogics — Star of the Month, outstanding performance',
-    'COMSATS Skills Development Society — Director of Communication'
+    'PureLogics, Star of the Month, outstanding performance',
+    'COMSATS Skills Development Society, Director of Communication'
   ]
 
   return (
@@ -144,11 +144,11 @@ const Experience = () => {
               <div className="text-primary font-semibold mb-2">COMSATS University Islamabad (CUI)</div>
               <div className="flex items-center gap-2 text-textSecondary text-sm mb-2">
                 <FaCalendar className="text-xs" />
-                <span>Sep 2020 – Sep 2024 · CGPA 2.94/4.0</span>
+                <span>Sep 2020 - Sep 2024, CGPA 2.94/4.0</span>
               </div>
               <p className="text-textSecondary text-sm leading-relaxed">
                 Thesis: Early Depression Signal Detection from Social Media Text Using Fine-Tuned
-                LLMs with Explainable AI — SHAP and LIME interpretability, 88.3% accuracy on
+                LLMs with Explainable AI, SHAP and LIME interpretability, 88.3% accuracy on
                 CLPsych/RSDD benchmarks.
               </p>
             </motion.div>
@@ -172,16 +172,12 @@ const Experience = () => {
                         rel="noopener noreferrer"
                         className="flex items-start gap-3 text-textSecondary group hover:text-primary transition-colors cursor-pointer"
                       >
-                        <span className="text-primary mt-1 group-hover:scale-125 transition-transform">
-                          ✓
-                        </span>
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary group-hover:scale-125 transition-transform" />
                         <span className="text-sm group-hover:underline">{cert.name}</span>
                       </a>
                     ) : (
                       <div className="flex items-start gap-3 text-textSecondary">
-                        <span className="text-primary mt-1">
-                          ✓
-                        </span>
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                         <span className="text-sm">{cert.name}</span>
                       </div>
                     )}
@@ -196,7 +192,7 @@ const Experience = () => {
               <div className="space-y-3">
                 {honours.map((honour, index) => (
                   <div key={index} className="flex items-start gap-3 text-textSecondary">
-                    <span className="text-primary mt-1">✓</span>
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                     <span className="text-sm">{honour}</span>
                   </div>
                 ))}

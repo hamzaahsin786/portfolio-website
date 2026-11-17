@@ -75,7 +75,7 @@ const ChatBot = () => {
                 <div className="font-display text-sm font-bold tracking-wide text-textPrimary">HAMZA AI</div>
                 <div className="flex items-center gap-1.5 font-mono text-[11px] text-lime-400">
                   <span className="h-1.5 w-1.5 rounded-full bg-lime-400 animate-pulse" aria-hidden="true" />
-                  ONLINE — ANSWERS FROM HIS PROFILE
+                  ONLINE - ANSWERS FROM HIS PROFILE
                 </div>
               </div>
               <button

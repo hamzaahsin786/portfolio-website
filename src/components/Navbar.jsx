@@ -55,7 +55,7 @@ const Navbar = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="flex items-center gap-3"
-            aria-label="Muhammad Hamza — back to top"
+            aria-label="Muhammad Hamza - back to top"
           >
             <span className="flex items-center justify-center w-9 h-9 rounded-lg border border-primary/60 bg-primary/10 font-display font-bold text-primary text-sm shadow-[0_0_16px_rgba(34,211,238,0.35)]">
               MH

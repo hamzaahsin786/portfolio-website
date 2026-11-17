@@ -103,7 +103,7 @@ Vercel offers **free hosting** for personal projects with:
    - Sign up/Login with GitHub
 
 3. **Import Project:**
-   - Click "Add New" → "Project"
+   - Click "Add New", then "Project"
    - Select your GitHub repository
    - Vercel will auto-detect Vite settings
 

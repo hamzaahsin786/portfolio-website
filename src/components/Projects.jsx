@@ -6,7 +6,7 @@ import SectionHeading from './SectionHeading'
 const Projects = () => {
   const projects = [
     {
-      title: 'Querive — AI Support & Lead Agent',
+      title: 'Querive: AI Support & Lead Agent',
       link: 'https://querive.com',
       description: "AI front office for SMBs answering from each business's knowledge base with cited answers. Built independently as sole AI engineer.",
       highlights: [
@@ -20,12 +20,12 @@ const Projects = () => {
       gradient: 'from-cyan-500/25 to-blue-500/25'
     },
     {
-      title: 'Propitive — Multi-Agent AI CRM',
+      title: 'Propitive: Multi-Agent AI CRM',
       link: 'https://propitive.com',
       description: 'CRM for property-management agencies where three autonomous agents run tenant and landlord conversations, lead qualification, and scheduled outreach against live property records.',
       highlights: [
         'Three autonomous agents for tenant and landlord conversations, lead qualification, and scheduled outreach',
-        'Multi-agent system on LangChain and LangGraph with intent classification and a 0–100 lead qualification score',
+        'Multi-agent system on LangChain and LangGraph with intent classification and a 0-100 lead qualification score',
         'Confidence thresholds escalate weak evidence to a human',
         'Grounded in jurisdiction-narrowed retrieval'
       ],
@@ -46,7 +46,7 @@ const Projects = () => {
       gradient: 'from-emerald-500/25 to-cyan-500/25'
     },
     {
-      title: 'TMS-SQA Agent — Autonomous Test Generation',
+      title: 'TMS-SQA Agent: Autonomous Test Generation',
       description: 'Autonomous AI agent for QA teams, generating end-to-end tests from live repositories.',
       highlights: [
         'End-to-end test generation from live repositories using tree-sitter AST analysis',
@@ -84,7 +84,7 @@ const Projects = () => {
       gradient: 'from-violet-500/25 to-cyan-500/25'
     },
     {
-      title: 'TalentTorch — AI Recruitment System',
+      title: 'TalentTorch: AI Recruitment System',
       description: 'ML recruitment platform automating candidate-job matching via NLP skill extraction and RAG-style ranking.',
       highlights: [
         'NLP-based skill extraction from resumes',

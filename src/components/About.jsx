@@ -7,7 +7,7 @@ const About = () => {
     {
       icon: <FaBrain />,
       title: 'LLM Systems in Production',
-      description: 'Taking LLM systems from research into production — model selection, benchmarking, fine-tuning, deployment, and monitoring'
+      description: 'Taking LLM systems from research into production: model selection, benchmarking, fine-tuning, deployment, and monitoring'
     },
     {
       icon: <FaRobot />,
@@ -22,7 +22,7 @@ const About = () => {
     {
       icon: <FaChartLine />,
       title: 'Evaluation & Observability',
-      description: 'Retrieval evaluation, LLM-as-judge, DeepEval and Confident AI over golden datasets — working to an accuracy target, not a demo'
+      description: 'Retrieval evaluation, LLM-as-judge, DeepEval and Confident AI over golden datasets, working to an accuracy target, not a demo'
     }
   ]
 
@@ -72,13 +72,13 @@ const About = () => {
             </h3>
             <p className="text-textSecondary text-lg mb-4 leading-relaxed">
               I'm an AI Engineer with 3 years taking LLM systems from research into production. I own
-              the full lifecycle — model selection and benchmarking, fine-tuning, retrieval and
-              evaluation design, deployment, and monitoring — and work to an accuracy target agreed
+              the full lifecycle: model selection and benchmarking, fine-tuning, retrieval and
+              evaluation design, deployment, and monitoring, and work to an accuracy target agreed
               up front rather than to a demo.
             </p>
             <p className="text-textSecondary text-lg mb-4 leading-relaxed">
               At MDSOL Technologies I owned the model and retrieval layers across two production SaaS
-              AI platforms serving 40+ agencies, shipping end to end — including a multi-agent system
+              AI platforms serving 40+ agencies, shipping end to end, including a multi-agent system
               on LangChain and LangGraph and a four-stage RAG evaluation harness over a 200-case
               golden set. At PureLogics I architect end-to-end RAG pipelines with hybrid retrieval,
               cross-encoder reranking, and LoRA/QLoRA fine-tuning for enterprise workflows.

@@ -29,7 +29,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
             >
               <span className="inline-block w-2 h-2 rounded-full bg-accent mr-2 animate-pulse" aria-hidden="true"></span>
-              SYSTEM ONLINE — OPEN TO WORK
+              SYSTEM ONLINE - OPEN TO WORK
             </motion.p>
 
             <motion.h1
@@ -60,8 +60,8 @@ const Hero = () => {
               transition={{ delay: 0.4 }}
             >
               AI Engineer with 3 years taking LLM systems from research into production. I own the
-              full lifecycle — model selection and benchmarking, fine-tuning, retrieval and evaluation
-              design, deployment, and monitoring — working to an accuracy target agreed up front
+              full lifecycle: model selection and benchmarking, fine-tuning, retrieval and evaluation
+              design, deployment, and monitoring, working to an accuracy target agreed up front
               rather than to a demo. My experience spans LLM fine-tuning, vision-language models,
               real-time voice agents, agentic RAG, and multi-agent systems.
             </motion.p>
@@ -195,7 +195,7 @@ const Hero = () => {
                 transition={{ repeat: Infinity, duration: 3, delay: 0.5 }}
                 className="absolute -bottom-4 -left-4 glass rounded-2xl p-4 shadow-xl"
               >
-                <div className="text-sm font-semibold text-white">Agentic RAG • Voice AI</div>
+                <div className="text-sm font-semibold text-white">Agentic RAG & Voice AI</div>
               </motion.div>
             </div>
           </motion.div>

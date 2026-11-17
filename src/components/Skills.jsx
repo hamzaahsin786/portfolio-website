@@ -56,7 +56,7 @@ const Skills = () => {
           eyebrow="SKILLS"
           title="Skills &"
           highlight="Expertise"
-          subtitle="The stack behind production LLM systems — from model and retrieval to evaluation and serving"
+          subtitle="The stack behind production LLM systems, from model and retrieval to evaluation and serving"
         />
 
         {/* Skill Groups */}

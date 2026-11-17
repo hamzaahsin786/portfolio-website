@@ -6,7 +6,7 @@
 
 export const BOT_NAME = 'Hamza AI'
 export const BOT_GREETING =
-  "Hi, I'm Hamza AI — Muhammad Hamza's assistant. Ask me about his work, projects, skills, education, or how to reach him."
+  "Hi, I'm Hamza AI, Muhammad Hamza's assistant. Ask me about his work, projects, skills, education, or how to reach him."
 
 export const SUGGESTIONS = [
   'What does Hamza do?',
@@ -20,7 +20,7 @@ const INTENTS = [
     id: 'greeting',
     keywords: ['hello', 'hi', 'hey', 'salam', 'aoa', 'assalam', 'good morning', 'good afternoon', 'good evening'],
     answer:
-      "Hello! I'm Hamza AI. I can tell you about Muhammad Hamza — his AI engineering work, his projects, his skills, or how to contact him. What would you like to know?",
+      "Hello! I'm Hamza AI. I can tell you about Muhammad Hamza, his AI engineering work, his projects, his skills, or how to contact him. What would you like to know?",
   },
   {
     id: 'who',
@@ -38,7 +38,7 @@ const INTENTS = [
     id: 'propitive',
     keywords: ['propitive'],
     answer:
-      "Propitive (propitive.com) is a Multi-Agent AI CRM for property-management agencies. Three autonomous agents run tenant and landlord conversations, lead qualification, and scheduled outreach.\nHamza designed the multi-agent system (LangChain, LangGraph): intent classification, a 0–100 lead qualification score, and confidence thresholds that escalate weak evidence to a human.\nStack: Python, LangGraph, pgvector.",
+      "Propitive (propitive.com) is a Multi-Agent AI CRM for property-management agencies. Three autonomous agents run tenant and landlord conversations, lead qualification, and scheduled outreach.\nHamza designed the multi-agent system (LangChain, LangGraph): intent classification, a 0-100 lead qualification score, and confidence thresholds that escalate weak evidence to a human.\nStack: Python, LangGraph, pgvector.",
   },
   {
     id: 'thesis',
@@ -80,25 +80,25 @@ const INTENTS = [
     id: 'voice',
     keywords: ['voice', 'voice ai', 'livekit', 'calling', 'asr', 'stt', 'tts', 'real-time voice', 'realtime voice'],
     answer:
-      "Yes — he builds real-time voice agents and inbound calling agents on LiveKit, with ASR/STT and TTS. Voice AI is one of his core areas, alongside agentic RAG and multi-agent systems.",
+      "Yes, he builds real-time voice agents and inbound calling agents on LiveKit, with ASR/STT and TTS. Voice AI is one of his core areas, alongside agentic RAG and multi-agent systems.",
   },
   {
     id: 'work',
     keywords: ['what do you do', 'what does he do', 'what does hamza do', 'your job', 'his job', 'work', 'role', 'profession', 'occupation', 'job', 'career', 'experience', 'where do you work', 'where does he work', 'company', 'purelogics', 'mdsol', 'current', 'bootcamp', 'intern'],
     answer:
-      "Associate Software Engineer (AI/ML) at PureLogics, Lahore — Dec 2025 to present. He architects end-to-end RAG pipelines (hybrid BM25 + vector retrieval, cross-encoder reranking, GPT-4.1) and does LoRA/QLoRA fine-tuning.\nBefore that: AI/ML Intern at PureLogics (Sep–Dec 2025) and Python + AI Bootcamp Trainee (May–Sep 2025).\nEarlier: MDSOL Technologies (Aug 2024 – Aug 2025), where he owned the model and retrieval layers of two production SaaS AI platforms serving 40+ agencies.",
+      "Associate Software Engineer (AI/ML) at PureLogics, Lahore, Dec 2025 to present. He architects end-to-end RAG pipelines (hybrid BM25 + vector retrieval, cross-encoder reranking, GPT-4.1) and does LoRA/QLoRA fine-tuning.\nBefore that: AI/ML Intern at PureLogics (Sep-Dec 2025) and Python + AI Bootcamp Trainee (May-Sep 2025).\nEarlier: MDSOL Technologies (Aug 2024 - Aug 2025), where he owned the model and retrieval layers of two production SaaS AI platforms serving 40+ agencies.",
   },
   {
     id: 'education',
     keywords: ['education', 'degree', 'university', 'college', 'study', 'studied', 'comsats', 'bachelor', 'bs cs', 'graduation', 'qualification', 'cgpa', 'coursework'],
     answer:
-      "He has a BS in Computer Science from COMSATS University Islamabad (Sep 2020 – Sep 2024), CGPA 2.94/4.0. His thesis — Early Depression Signal Detection from Social Media Text Using Fine-Tuned LLMs with Explainable AI — reached 88.3% accuracy on CLPsych/RSDD benchmarks. Coursework: Machine Learning, Artificial Intelligence, Computer Vision, Data Structures & Algorithms, Data Science.",
+      "He has a BS in Computer Science from COMSATS University Islamabad (Sep 2020 - Sep 2024), CGPA 2.94/4.0. His thesis: Early Depression Signal Detection from Social Media Text Using Fine-Tuned LLMs with Explainable AI, reached 88.3% accuracy on CLPsych/RSDD benchmarks. Coursework: Machine Learning, Artificial Intelligence, Computer Vision, Data Structures & Algorithms, Data Science.",
   },
   {
     id: 'projects',
     keywords: ['project', 'projects', 'portfolio', 'built', 'work samples', 'show me'],
     answer:
-      "He has 7 key projects:\n1. Querive — AI Support & Lead Agent (querive.com).\n2. Propitive — Multi-Agent AI CRM (propitive.com).\n3. Depression Detection with Explainable AI (his thesis, 88.3% accuracy).\n4. TMS-SQA Agent — autonomous test generation.\n5. Domain-Specific LLM Fine-Tuning Pipeline (LoRA / QLoRA, Mistral 7B).\n6. Production RAG System with Evaluation & Monitoring.\n7. TalentTorch — AI recruitment system.\nAsk me about any of them by name for details.",
+      "He has 7 key projects:\n1. Querive: AI Support & Lead Agent (querive.com).\n2. Propitive: Multi-Agent AI CRM (propitive.com).\n3. Depression Detection with Explainable AI (his thesis, 88.3% accuracy).\n4. TMS-SQA Agent: autonomous test generation.\n5. Domain-Specific LLM Fine-Tuning Pipeline (LoRA / QLoRA, Mistral 7B).\n6. Production RAG System with Evaluation & Monitoring.\n7. TalentTorch: AI recruitment system.\nAsk me about any of them by name for details.",
   },
   {
     id: 'skills',
@@ -110,7 +110,7 @@ const INTENTS = [
     id: 'certifications',
     keywords: ['certification', 'certifications', 'certificate', 'certificates', 'course', 'courses', 'credentials'],
     answer:
-      "He holds 8 certifications:\n• AI Engineer Agentic Track (Ed Donner, Ligency)\n• AI Engineer Core Track (Ed Donner, Ligency)\n• AI for Healthcare Systems (University of Colorado)\n• LLMOps Specialization (Duke, Coursera)\n• Generative AI and LLMs (IBM, Coursera)\n• Machine Learning Specialization (IBM)\n• Introduction to MCP (Anthropic, SkillJar)\n• Python + AI Bootcamp (PureLogics)",
+      "He holds 8 certifications:\n1. AI Engineer Agentic Track (Ed Donner, Ligency)\n2. AI Engineer Core Track (Ed Donner, Ligency)\n3. AI for Healthcare Systems (University of Colorado)\n4. LLMOps Specialization (Duke, Coursera)\n5. Generative AI and LLMs (IBM, Coursera)\n6. Machine Learning Specialization (IBM)\n7. Introduction to MCP (Anthropic, SkillJar)\n8. Python + AI Bootcamp (PureLogics)",
   },
   {
     id: 'honours',
@@ -128,7 +128,7 @@ const INTENTS = [
     id: 'cv',
     keywords: ['cv', 'resume', 'download cv', 'download resume', 'download'],
     answer:
-      "You can download his CV with the 'Download CV' button on this page (bottom-right corner). It is also listed as 'Muhammad Hamza — AI Engineer'.",
+      "You can download his CV with the 'Download CV' button on this page (bottom-right corner). It is also listed as 'Muhammad Hamza, AI Engineer'.",
   },
   {
     id: 'location',
@@ -140,7 +140,7 @@ const INTENTS = [
     id: 'thanks',
     keywords: ['thank', 'thanks', 'shukran', 'great', 'awesome', 'nice'],
     answer:
-      "You're welcome! Anything else you'd like to know about Hamza — his projects, skills, or experience?",
+      "You're welcome! Anything else you'd like to know about Hamza, his projects, skills, or experience?",
   },
   {
     id: 'availability',
@@ -151,7 +151,7 @@ const INTENTS = [
 ]
 
 const FALLBACK =
-  "I can only answer from Hamza's profile — his work, projects, skills, education, certifications, and contact details. Try asking, for example: 'What are his skills?' or 'Show me his projects.'"
+  "I can only answer from Hamza's profile: his work, projects, skills, education, certifications, and contact details. Try asking, for example: 'What are his skills?' or 'Show me his projects.'"
 
 // Salary is not in the CV: answer it directly, before any other intent
 // can claim the question (e.g. 'current' matching the work intent).
